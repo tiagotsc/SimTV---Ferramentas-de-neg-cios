@@ -1,0 +1,211 @@
+/*
+CHAT - Personalização
+*/
+
+.nao-lida{
+    font-weight: bold;
+    color: black;
+}
+.lida{
+    color: black;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+#status-user-favorito, .favorito-status, .emotion, #emotionOpen, #clickable, #chat-btn-enviar, .click{
+    cursor: pointer;
+}
+
+#status-user-favorito{
+    float: right; 
+    margin-top: 12px;
+}
+
+.style-new-msg{
+    font-size: 12px; color:#FF4500;
+}
+
+.chat-box{
+    display: none;
+}
+
+.chat .chat-history{
+    max-height: 342px;
+}
+
+.tituloDp{
+    font-variant: small-caps; 
+    font-size: 18px; 
+    padding-left: 10px;
+}
+
+.notifyjs-corner{
+    z-index: 99991;
+    
+}
+
+#chat-base{
+    position: fixed; 
+    bottom: 2px; 
+    right: 2px; 
+    background: #444753; 
+    color: white; 
+    border-radius: 5px; 
+    z-index: 9999;
+}
+
+#chat-menu{
+    vertical-align: center; 
+    text-align: right; 
+    height: 30px; 
+    min-width: 260px;
+}
+
+#chat-menu-left{
+    width:50%; 
+    float:left; 
+    text-align: left; 
+    padding: 5px 0px 0px 10px;
+}
+
+#chat-min-max{
+    width:50%; 
+    float:left;
+}
+
+#chat-min-max img{
+    width: 20px;
+    margin: 5px 5px 0px 5px;
+}
+
+#people-list{
+    height: 520.3px; 
+    overflow: auto; 
+    width: 280px;
+}
+
+#chatStatus{
+    width: 160px;
+}
+
+.search{
+    padding-top: 0px;
+}
+
+.nav.nav-tabs{
+    padding: 0px; 
+    border: 0px; 
+    margin-left: 5px;
+}
+
+.favorito-sim{
+    float: left; 
+    color: #FFA500;
+}
+
+.favorito-nao{
+    float: left; 
+    color: #D8DADF;
+}
+
+.tituloDp{
+    margin-top: 30px;
+}
+
+.chat-history.chat-box{
+    height:382.7px; padding: 0px;
+}
+
+.chat-history.chat-box form{
+    border: 0px;
+}
+
+#chatEmotion {
+    position: absolute; 
+    bottom: 90px; 
+    right: 2px; 
+    width: 485px;
+    height:150px; 
+    border-radius: 5px; 
+    background-color: white; 
+    padding: 5px 10px; 
+    overflow: auto; 
+    display: none; 
+    background-color: #FFEBCD;
+    z-index: 99992;
+}
+
+#chatEmotion img{
+    width: 30px;
+}
+
+#chat-escrita{
+    padding: 10px; 
+    background-color: #D3D3D3; 
+    border-bottom-right-radius:5px;
+}
+
+#chat-emotion-file{
+    width:10%; 
+    float:left; 
+    text-align: center;
+}
+
+#emotionOpen{
+    display: block; 
+    width: 30px; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+#chat-emotion-file span{
+    display: block;
+    margin: 15px 10px 0px 0px; 
+    padding: 0px;
+}
+
+#chat-escrita-campo{
+    width:80%; 
+    float:left;
+}
+
+#chatWrite{
+    height: 68.6px; 
+    border-radius: 5px; 
+    background-color: white; 
+    padding: 5px 10px; 
+    overflow: auto;
+}
+
+#chat-escrita-envio{
+    width:10%; 
+    float: left; 
+    vertical-align: central;
+}
+
+#chat-btn-enviar{
+    font-size: 40px;
+    margin: 0px 0px 0px 5px; 
+    padding: 0px;
+}
+
+.chat-icone-lida{
+    float:right; 
+    font-size:10px
+}
+
+#div-msg-anterior{
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+#div-msg-anterior span{
+    cursor: pointer;
+}
+
+.chat-conteudo{
+    display: none;
+}

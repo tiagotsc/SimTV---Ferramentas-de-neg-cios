@@ -1,0 +1,43 @@
+.perlist {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+.main_wrap {
+  margin: 5px 1% 0 1%;
+  width: 98%;
+  background-color: rgba(200,200,200,0.5);
+  border-radius: 3px;
+  background: #eeeeee;
+  background: -moz-linear-gradient(top,#eeeeee 0%,#cccccc 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#eeeeee),color-stop(100%,#cccccc));
+  background: -webkit-linear-gradient(top,#eeeeee 0%,#cccccc 100%);
+  background: -o-linear-gradient(top,#eeeeee 0%,#cccccc 100%);
+  background: -ms-linear-gradient(top,#eeeeee 0%,#cccccc 100%);
+  background: linear-gradient(to bottom,#eeeeee 0%,#cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee',endColorstr='#cccccc',GradientType=0);
+}
+.perlist {
+  font-size: small;
+  font-weight: bold;
+  width: 100%;
+}
+.perlist>tbody>tr {
+  line-height: 15px;
+  height: 15px;
+}
+.perheader,
+.headerhits {
+  font-size: medium;
+  background-color: #aaaaaa;
+  padding: 5px;
+}
+.pername,
+.perheader {
+  text-align: right;
+  padding-right: 5px;
+}
+.perhits_tv,
+.perhits_cm {
+  padding: 0 5px;
+  border-radius: 3px;
+}

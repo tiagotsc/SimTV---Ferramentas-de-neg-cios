@@ -1,0 +1,36 @@
+<p>
+	<h5>Suspensas</h5>
+		Não pode haver suspensa de reclamação todas devem ser finalizadas;
+</p>
+<p>
+	<h5>Reagendar</h5>
+		Não pode haver reagendamento de reclamação. Todas devem ser finalizadas;
+</p>
+<p>
+	<h5>Agendamento</h5>
+		Ordens com agenda no no passado ou no próprio dia são consideradas fora do padrão pois se foi agendada e está para hoje ou no passado, houve falha no processo de emissão;
+</p>
+<p>
+	<h5>Emitida</h5>
+	Ordens com agenda emitida com data no passado ou no próprio dia são consideradas fora do padrão pois se foi Emitida, deveria estar na rua e ser executada;
+</p>
+<p>
+	<h5>Pendente</h5>
+	Ordem que a central:
+	<ul>
+		<li>
+			- Errou procedimento e não agendou 
+		</li>
+		<li>
+			- Não enxergou data desejada pelo cliente e abriu ocorrência
+		</li>
+		<li>
+			- Alguem foi reagendar e retornou OS para pendente
+		</li>
+		<li>
+			- Não identificou problema na região mas não aparenta ser problema interno. 
+			Fica pendente para o NOC monitorar a ocorrência de evento massivo na região (NODE) e, 
+			caso não se confirme, o NOC direciona para tratamento de Backlog da RI.
+		</li>
+	</ul>
+</p>

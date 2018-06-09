@@ -1,0 +1,93 @@
+set @VARUltimoDia := '2017-02-05';
+set @VARDataAtivacao := '2017-02-28';
+
+
+SELECT 
+LAST_DAY(@VARUltimoDia),
+@VARDataAtivacao,
+SUBSTR(@VARDataAtivacao,9,2),
+DATEDIFF(LAST_DAY(@VARUltimoDia), @VARDataAtivacao),
+CASE 
+	WHEN SUBSTR(LAST_DAY(@VARUltimoDia),9,2) = 31
+		THEN DATEDIFF(LAST_DAY(@VARUltimoDia), @VARDataAtivacao) - 1
+	WHEN SUBSTR(LAST_DAY(@VARUltimoDia),9,2) = 28
+		THEN DATEDIFF(LAST_DAY(@VARUltimoDia), @VARDataAtivacao) + 3
+	WHEN SUBSTR(LAST_DAY(@VARUltimoDia),9,2) = 29
+		THEN DATEDIFF(LAST_DAY(@VARUltimoDia), @VARDataAtivacao) + 2
+ELSE DATEDIFF(LAST_DAY(@VARUltimoDia), @VARDataAtivacao) END AS dias
+FROM DUAL
+
+/*SELECT 
+DATEDIFF('2017-02-30', '2017-02-06') 
+FROM DUAL*/
+
+
+DROP FUNCTION IF EXISTS `diasAtivacaoFaturar`;
+CREATE FUNCTION diasAtivacaoFaturar(VARUltimoDia DATE,VARDataAtivacao DATE) RETURNS INT
+BEGIN
+
+DECLARE diasFaturar INT;
+
+	SELECT 
+		CASE 
+			WHEN SUBSTR(LAST_DAY(VARUltimoDia),9,2) = 31 # Mês com 31 dias
+				THEN DATEDIFF(LAST_DAY(VARUltimoDia), VARDataAtivacao) - 1
+			WHEN SUBSTR(LAST_DAY(VARUltimoDia),9,2) = 28 # Mês com 28 dias (Abril)
+				THEN DATEDIFF(LAST_DAY(VARUltimoDia), VARDataAtivacao) + 3
+			WHEN SUBSTR(LAST_DAY(VARUltimoDia),9,2) = 29 # Mês com 29 dias (Abril)
+				THEN DATEDIFF(LAST_DAY(VARUltimoDia), VARDataAtivacao) + 2
+		ELSE DATEDIFF(LAST_DAY(VARUltimoDia), VARDataAtivacao) END # Mês com 30 dias
+		INTO diasFaturar
+	FROM DUAL;
+
+	IF SUBSTR(VARDataAtivacao,6,5) = '02-28' THEN SET diasFaturar = 3; # Ativação 28/02 cobra se 3 dias
+	ELSEIF SUBSTR(VARDataAtivacao,6,5) = '02-29' THEN SET diasFaturar = 2; # Ativação 29/02 cobra se 2 dias
+	ELSEIF SUBSTR(VARDataAtivacao,9,2) = 30 THEN SET diasFaturar = 1; # Ativação dia 30 cobra se 1 dias
+	ELSEIF SUBSTR(VARDataAtivacao,9,2) = 31 THEN SET diasFaturar = 0; # Ativação dia 31 não cobra se nada                      
+	END IF;
+
+RETURN diasFaturar;
+
+END
+;;
+DELIMITER ;
+
+
+# REGRA CANCELAMENTO
+set @VARDataCanc := '2017-02-28';
+set @VARPrimDiaMes := '2017-02-01';
+
+SELECT 
+SUBSTR(@VARDataCanc,6,2),
+@VARDataCanc,
+LAST_DAY(@VARDataCanc),
+SUBSTR(@VARDataCanc,9,2),
+CASE 
+	WHEN SUBSTR(@VARDataCanc,9,2) = 31
+		THEN 30
+ WHEN SUBSTR(@VARDataCanc,6,2) = '02' AND @VARDataCanc = LAST_DAY(@VARDataCanc)
+		THEN 30
+ELSE DATEDIFF(@VARDataCanc, @VARPrimDiaMes) END AS teste
+FROM DUAL
+
+DROP FUNCTION IF EXISTS `diasCancelFaturar`;
+CREATE FUNCTION diasCancelFaturar(VARPrimDiaMes DATE, VARDataCanc DATE) RETURNS INT
+BEGIN
+
+DECLARE diasCanc INT;
+
+	SELECT 
+		CASE 
+			WHEN SUBSTR(VARDataCanc,9,2) = 31
+				THEN 30
+		 WHEN SUBSTR(VARDataCanc,6,2) = '02' AND VARDataCanc = LAST_DAY(VARDataCanc)
+				THEN 30
+		ELSE DATEDIFF(VARDataCanc, VARPrimDiaMes) + 1 END
+		INTO diasCanc
+	FROM DUAL;
+
+RETURN diasCanc;
+
+END
+;;
+DELIMITER ;

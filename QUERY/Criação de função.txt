@@ -1,0 +1,30 @@
+CREATE FUNCTION valorComImposto (VARcampo NUMERIC(15,2),VARisencaoICMS CHAR(3),VARimpostos VARCHAR(255), VARservico INT, VARfaturadoPOR INT, VARRetorno VARCHAR(10)) RETURNS NUMERIC(15,2)
+BEGIN
+
+DECLARE valorCalculado NUMERIC(15,2);
+
+	SELECT
+		ROUND(
+			VARcampo / 
+			(
+				1 - (SUM(
+				CASE WHEN VARisencaoICMS = 'SIM' AND nome = 'ICMS'
+					THEN 0
+				ELSE 
+					CASE WHEN VARRetorno = 'EFETIVA' THEN efetiva WHEN VARisencaoICMS = 'SIM' THEN efetiva ELSE reducao END 
+				END
+				) / 100)
+			)
+		,2)
+		INTO valorCalculado
+	FROM telecom.tcom_imposto
+	INNER JOIN adminti.estado_cidade ON tcom_imposto.cd_estado = estado_cidade.cd_estado
+	WHERE 
+		FIND_IN_SET(nome,VARimpostos) AND CURDATE() >= data_inicio AND CURDATE() <= data_fim AND estado_cidade.cd_unidade = VARfaturadoPOR
+		AND tcom_imposto.idServico = VARservico;
+
+RETURN valorCalculado;
+
+END
+
+DROP FUNCTION valorComImposto

@@ -1,0 +1,57 @@
+#content{
+	padding-right: 0; padding-left: 0;
+}
+#topbar{
+	display:block; position: relative;
+	font-size: 10pt;
+	line-height: 2.2em;
+	padding: 3px 0;
+	border-bottom: 1px solid rgb(200,200,200);
+	background-color: white;
+	width: 100%;
+	text-align: center;
+}
+#container{
+	padding: 0; margin: 0;
+	width: 100%;
+}
+#perlist{
+	display: inline-block;
+	width: auto;
+	font-weight: bold;
+}
+#perlist>li{
+	cursor: pointer;
+	display: inline-block;
+	background-color: rgb(240,240,240);
+	width: auto;
+	border: 1px solid rgb(100,100,100);
+	border-radius: 2px;
+	padding: 0 1em;
+	margin: 0 2px;
+}
+#perlist>li.selected{
+	background-color: #304C32;
+	color: white;
+}
+#perlist>li.selected.focus{
+	background-color: #6F99D0;
+	color: white;
+}
+.geoinfowindow{
+	height: 8.5em;
+	line-height: 1.5em;
+	overflow-y: hidden;
+}
+.geoinfowindow a{
+	text-decoration: underline !important;
+}
+#topbar>button, #topbar>label{
+	margin: 0 3px;
+}
+#topbar>.separator{
+	display: inline-block;
+	width: 8px;
+	margin: 0 1em;
+	background: url(/lib/img/moveicon.png) center no-repeat transparent;
+}

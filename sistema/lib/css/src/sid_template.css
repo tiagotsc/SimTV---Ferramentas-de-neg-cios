@@ -1,0 +1,190 @@
+th{
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 10px 10px 10px;
+}
+td{
+    vertical-align: top;
+    padding: 10px 10px 10px 10px;
+}
+
+
+#loading{
+    position: relative;
+    display:inline-block;
+    padding-left: 20px;
+/*    margin-left: 20px;*/
+
+}
+#topbar{
+    float:right;
+    position: relative;
+    margin-right: 20px;
+    padding: 5px;
+    line-height: 30px;
+    display:inline-block;
+/*    background-color: #FCFCFC;*/
+}
+.simple_button{
+/*    float: right;*/
+    cursor: pointer;
+    color:black;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    border-color: #FCFCFC;
+    display: inline-block;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    line-height: 30px;
+    height: 30px;
+}
+.simple_button:hover{
+    border-color: #454545;
+}
+#create_button{
+/*    float: right;*/
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    border-color: #FCFCFC;
+    display: inline-block;
+    padding-left: 5px;
+
+    padding-right: 5px;
+    position: relative;
+    line-height: 30px;
+    height: 30px;
+}
+/*#create_button img{
+    position: absolute;
+    margin-top: 7px;
+}*/
+#create_button:hover{
+    border-color: #454545;
+}
+#chart_disp{
+    display: block;
+    position: relative;
+    width: 96%;
+    margin-left: 2%;
+    background-color: black;
+}
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+/*topbar*/
+
+#chartdiv{
+    height:600px;
+    width:90%;
+    margin-left:2%;
+    position: relative;
+}
+
+#specs_table{
+    width:100%;
+}
+.tdval{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    width: auto;
+    float: right;
+}
+td{
+
+    vertical-align: middle;
+}
+.tdval input{
+    text-align: right;
+    padding: 0 5px 0 5px;
+    width: 100px;
+}
+.tdimg{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.tdimg a{
+    display: inline-block;
+}
+#printbarcode{
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+#printbarcode:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*.ui-autocomplete{
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    width: 50px;
+    line-height: 15pt;
+    border-color: #454545;
+}
+.ui-state-hover{
+    background-color: whitesmoke;
+}*/
+.ui-autocomplete-loading {
+    background: white url(/lib/img/loading_16x16.gif) right center no-repeat;
+}
+.actionrow{
+    text-align: right;
+}
+.descr{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+	overflow-x:hidden;
+    height: 300px;
+    font-size: 10pt;
+}
+.edittb-field{
+    float:right;
+    text-align: right;
+}
+.fieldtb{
+    width:100%;
+}
+#mdescr{
+    resize: none;
+    width: 100%;
+    height:100%;
+}
+#newitem{
+    width: 70%;
+    margin:0 15%;
+    position:relative;
+}
+#newitem td{
+    padding:5px;
+}
+input{
+	font-size:10pt;
+}
+#newitem input, #newitem textarea{
+    width: 100%;
+    resize: none;
+}
+select{
+	font-size:10pt;
+}
+#newitem td{
+    text-align: right;
+}

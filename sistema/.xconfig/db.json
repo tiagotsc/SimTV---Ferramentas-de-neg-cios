@@ -1,0 +1,53 @@
+{
+  "defaultSgo": {
+    "hostname": "192.168.140.240",
+    "username": "met",
+    "password": "senhadomysqlqueeununcavoumemorizargrazadeus$imTV",
+    "database": "met",
+    "dbdriver": "mysqli",
+    "dbprefix": "",
+    "pconnect": false,
+    "db_debug": true,
+    "cache_on": false,
+    "cachedir": "",
+    "char_set": "utf8",
+    "dbcollat": "utf8_general_ci",
+    "swap_pre": "",
+    "autoinit": true,
+    "stricton": true,
+    "save_queries": false
+  },
+  "noc": {
+    "hostname": "192.168.140.240",
+    "username": "nocDBUser",
+    "password": "nocTamb3mTemUmaSenha>Que4Xina",
+    "database": "noc",
+    "dbdriver": "mysqli",
+    "dbprefix": "",
+    "pconnect": false,
+    "db_debug": true,
+    "cache_on": false,
+    "cachedir": "",
+    "char_set": "utf8",
+    "dbcollat": "utf8_general_ci",
+    "swap_pre": "",
+    "autoinit": true,
+    "stricton": true,
+    "save_queries": false
+  },
+  "supsiga": {
+    "hostname": "192.168.140.41/GXVSIM",
+    "username": "sgo_admin",
+    "password": "sgo_admin",
+    "database": "GXVSIM",
+    "dbdriver": "oci8",
+    "dbprefix": "",
+    "pconnect": false,
+    "db_debug": true,
+    "cache_on": false,
+    "cachedir": "",
+    "char_set": "utf8",
+    "dbcollat": "utf8_general_ci",
+    "save_queries": false
+  }
+}

@@ -1,0 +1,60 @@
+fieldset{
+    border-radius:3px;
+    border:#666 solid 1px;
+    padding:5px 0;
+    width:98%;
+    margin:5px 1%;
+    text-align:center;
+    background: #E5FFF8;
+}
+
+#content{
+    text-align: center;
+}
+
+#headcad{
+    height: 40px;
+    width:100%;
+    color:#000000;
+    background: #ff00ff;
+    background-color: rgb(211,211,211);
+    overflow: hidden;
+}
+
+.bt{
+    display: inline-block; position: relative;
+    width: auto;
+
+    background-color: rgb(100,100,100);
+    color: white;
+    border: 1px solid white;
+    border-radius: 1px;
+    margin: 10px 0;
+    padding:0 10px;
+    line-height: 2em;
+    font-weight: bold;
+
+}
+.bt:hover{
+    background-color: #3F3F80;
+}
+
+#tb-equipamentos {
+    width: 97.5%;
+    margin: 0 1.25%;
+    
+}
+
+#tb-equipamentos th, #tb-equipamentos td {
+    border: 1px solid rgb(200, 200, 200);
+    background: #C5EEC7;
+}
+
+#content >div:last-child {
+    text-align: right; 
+    margin-right: 1.25%;
+}
+
+strong {
+    font-weight: bold;
+}

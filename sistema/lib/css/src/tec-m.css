@@ -1,0 +1,49 @@
+#topbar{
+	height:auto;
+	line-height:30px;
+}
+button{
+	display:block;
+	position:relative;
+	width: 96%;
+	margin:10px 2%;
+	font-size:medium;
+	font-weight: bold;
+	border-radius: 3px;
+}
+
+#bbts{
+	position:relative;
+	display:block;
+	height:auto;
+	width:100%;
+}
+#key{
+	font-size:14pt
+}
+#showbts{
+	display:block;
+	position:relative;
+	width:100%;
+	height:56px;
+	line-height:56px;
+	font-size:16pt;
+	font-weight:bold;
+	text-indent:20px;
+	text-align:left;
+	cursor:pointer;
+	background-color:#E4E4E4;
+}
+#showbts:hover{
+	background-color:#EEE;
+	border-bottom:2px solid #857B7B;
+}
+#stzsv{
+	text-align:center;
+	margin-right:0;
+}
+#mytecname{
+	display:block;
+	line-height: 2em;
+	background-color: rgb(240,240,240);
+}

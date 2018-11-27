@@ -1,0 +1,45 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined index: tabela /var/www/html/sistema/sistema/application/libraries/Crud.php 239
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 88
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 149
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined variable: percod /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 202
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined variable: nodeDsc /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 208
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined variable: tipo /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 218
+ERROR - 2017-06-14 11:55:00 --> Severity: Notice  --> Undefined variable: status /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 225
+ERROR - 2017-06-14 11:58:02 --> Severity: Notice  --> Undefined index: tabela /var/www/html/sistema/sistema/application/libraries/Crud.php 239
+ERROR - 2017-06-14 11:58:03 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 88
+ERROR - 2017-06-14 11:58:03 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 149
+ERROR - 2017-06-14 11:58:03 --> Severity: Notice  --> Undefined variable: percod /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 202
+ERROR - 2017-06-14 11:58:03 --> Severity: Notice  --> Undefined variable: nodeDsc /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 208
+ERROR - 2017-06-14 11:58:03 --> Severity: Notice  --> Undefined variable: tipo /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 218
+ERROR - 2017-06-14 11:58:03 --> Severity: Notice  --> Undefined variable: status /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 225
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined index: tabela /var/www/html/sistema/sistema/application/libraries/Crud.php 239
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 88
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 159
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined variable: percod /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 212
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined variable: nodeDsc /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 218
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined variable: tipo /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 228
+ERROR - 2017-06-14 11:58:39 --> Severity: Notice  --> Undefined variable: status /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 235
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined index: tabela /var/www/html/sistema/sistema/application/libraries/Crud.php 239
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 88
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 159
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined variable: percod /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 212
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined variable: nodeDsc /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 218
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined variable: tipo /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 228
+ERROR - 2017-06-14 13:58:45 --> Severity: Notice  --> Undefined variable: status /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 235
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined index: tabela /var/www/html/sistema/sistema/application/libraries/Crud.php 239
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 88
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 159
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined variable: percod /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 212
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined variable: nodeDsc /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 218
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined variable: tipo /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 228
+ERROR - 2017-06-14 13:59:09 --> Severity: Notice  --> Undefined variable: status /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 235
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined index: tabela /var/www/html/sistema/sistema/application/libraries/Crud.php 239
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 88
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined variable: observacao /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 159
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined variable: percod /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 212
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined variable: nodeDsc /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 218
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined variable: tipo /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 228
+ERROR - 2017-06-14 13:59:34 --> Severity: Notice  --> Undefined variable: status /var/www/html/sistema/sistema/application/modules/ura/views/node/view_psq.php 235
+ERROR - 2017-06-14 15:37:46 --> 404 Page Not Found --> fical/convenioicms/teste

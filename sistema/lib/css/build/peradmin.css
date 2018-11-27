@@ -1,0 +1,409 @@
+select,
+input {
+  border: 1px solid #e3e2e2;
+  font-size: 10pt;
+}
+#container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #BDBDBD;
+}
+#upbar {
+  display: block;
+  position: relative;
+  width: 100%;
+  line-height: 36px;
+  height: 36px;
+  text-align: right;
+  border-bottom: 1px solid #BDBDBD;
+  font-size: 10pt;
+}
+#left {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow: hidden;
+}
+#tec_container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.tec_settings {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/lib/img/usercard.png) center center no-repeat;
+}
+.tec_undefined {
+  background: url(/lib/img/clean_user.png) center center no-repeat;
+}
+#os_tipo_tec {
+  height: 100px;
+}
+#tec_settings {
+  display: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  line-height: 2em;
+  font-size: 10pt;
+}
+#tec_settings>fieldset {
+  border: 1px solid #BDBDBD;
+  border-radius: 3px;
+  padding: 3px 0;
+  background-color: #e8e7e7;
+}
+.tecrow {
+  display: block;
+  font-weight: bold;
+  padding-left: 10px;
+}
+#right {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #e3e2e2;
+}
+#mover {
+  display: block;
+  position: absolute;
+  cursor: none;
+  z-index: 2;
+  width: 1px;
+  height: 100%;
+  left: 20%;
+  top: 0;
+  background: #BDBDBD;
+  border-style: none;
+}
+#map {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+#zonasw {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #e9ffda;
+  border-top: 1px solid #46553B;
+  height: 100px;
+}
+#insertzona {
+  position: absolute;
+  display: block;
+  line-height: 30px;
+  font-size: 10pt;
+  font-weight: bold;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  background-color: #4f6f47;
+  color: white;
+  cursor: pointer;
+  bottom: -30px;
+  left: 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+#insertzona:hover {
+  background-color: #546e90;
+}
+#per_main {
+  margin-right: 10px;
+}
+.ui-spinner {
+  height: 23px;
+  font-size: 10pt;
+  line-height: 1em;
+}
+#kmh,
+#min_desloc_time,
+#max_desloc_time {
+  width: 30px;
+  font-size: 10pt;
+  line-height: 1em;
+}
+.grid_bar {
+  display: block;
+  position: relative;
+  font-size: 10pt;
+  text-align: right;
+  line-height: 3em;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.tecw {
+  width: 98%;
+  margin: 3px 1%;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #f0efef;
+}
+.tecw:hover,
+.tecwselected {
+  background-color: #c8fbc3;
+}
+.tecaloc {
+  border: 1px solid #4f6f47;
+}
+.openTec {
+  background-color: #c1e2f1;
+  font-weight: bold;
+}
+.tec {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 2em;
+}
+.tecidw {
+  width: 50px;
+}
+.tecname {
+  font-size: 10pt;
+  text-align: left;
+  text-indent: 5px;
+}
+button {
+  margin: 0 5px;
+}
+#zonaname {
+  width: 200px;
+  font-size: 12pt;
+}
+#zonaedit {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  text-align: left;
+  background-color: white;
+}
+#zonas {
+  position: absolute;
+  display: block;
+  left: 30px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.zona {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 92px;
+  border: 1px solid #384C3F;
+  border-radius: 3px;
+  margin: 3px 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.zona:hover {
+  box-shadow: inset 3px 3px 5px rgba(100,100,100,0.5), inset -3px -3px 5px rgba(100,100,100,0.5);
+}
+.ztop,
+.zbottom {
+  display: block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  font-size: small;
+  font-weight: bold;
+  text-align: right;
+  width: 100%;
+}
+.ztxt {
+  display: inline;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+.ttxt {
+  display: inline;
+  white-space: nowrap;
+}
+.zonaname {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #e3e2e2;
+  border-bottom: 1px solid #e3e2e2;
+  font-weight: bold;
+  font-size: 10pt;
+  text-indent: 5px;
+}
+.zn {
+  display: inline;
+  white-space: nowrap;
+  z-index: 2;
+}
+.zonaselected>.zonaname {
+  background-color: black;
+}
+.zonaselected {
+  color: white;
+  border-color: red;
+}
+#clicktoadd {
+  font-size: small;
+  font-style: italic;
+  color: #4f6f47;
+}
+.tecname {
+  text-transform: capitalize;
+}
+#grid_table {
+  border: 1px solid #BDBDBD;
+  width: 100%;
+}
+.hour {
+  border: 1px solid #BDBDBD;
+  background-color: #ddebac;
+}
+.hourweek {
+  text-align: left;
+  background-color: #d6e3ba;
+  width: 100px;
+}
+.weekday {
+  text-align: left;
+  font-size: 10pt;
+  font-weight: bold;
+  background-color: #c8fbc3;
+  padding: 5px 15px 5px 5px;
+  border: 1px solid #BDBDBD;
+}
+.workslot {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #e3e2e2;
+  border: 1px solid #BDBDBD;
+}
+.workentry {
+  background-color: #5971e2;
+}
+#grid_tooltip {
+  height: 1.2em;
+  margin: 5px 0;
+  font-style: italic;
+  text-align: right;
+}
+.tec_time {
+  width: 30px;
+  line-height: 1em;
+}
+.tec_time_label {
+  margin-right: 5px;
+  border-right: 1px solid #46553B;
+  text-transform: capitalize;
+  padding-right: 5px;
+}
+.tec_time_label:last-child {
+  margin-right: 0;
+  border-right: none;
+  padding-right: 0;
+}
+.mright {
+  margin-right: 5px;
+}
+#tec_timeout_dlg {
+  display: none;
+}
+.timeoutd {
+  width: 80px;
+  border: 1px solid #BDBDBD;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+#tec_timeouts {
+  margin-top: 5px;
+  width: 100%;
+  background-color: #ecebeb;
+  line-height: 2em;
+}
+#tec_timeouts td {
+  font-size: small;
+  border: 1px solid #BDBDBD;
+}
+#tec_timeouts th {
+  font-size: 10pt;
+  font-weight: bold;
+  border: 1px solid #BDBDBD;
+}
+.timeout_action_cell {
+  width: 30px;
+}
+.clear_timeout {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: url(/lib/img/trash.png) center no-repeat;
+}
+#timeoutbar {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  line-height: 30px;
+  font-size: 10pt;
+}
+#authorname {
+  color: #751919;
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
+}
+#hor_tec {
+  text-decoration: underline;
+}
+#hor_tec_list {
+  display: block;
+  position: absolute;
+  font-size: small;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  text-align: left;
+  line-height: 1.5em;
+  padding: 10px;
+  right: 0;
+  width: auto;
+  z-index: 2;
+}

@@ -1,0 +1,29 @@
+.cadastrar{
+    font-size: 25px;
+}
+
+input[type=text]{
+    margin-bottom: 15px;
+}
+
+tr{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+.capsula{
+    border: 1px solid #d8d6d6;
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.legenda{
+    margin-left: 30px;
+    margin-bottom: -1px;
+    font-family: Georgia;
+    font-size: 22px;
+}

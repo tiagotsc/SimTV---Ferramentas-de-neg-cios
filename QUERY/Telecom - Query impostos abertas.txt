@@ -1,0 +1,46 @@
+set @VARcampo := 5774.00; # Valor sem mensalidade
+set @VARisencaoICMS := 'SIM'; # Isenção de ICMS
+set @VARestatal := 'NAO'; # É estatal
+set @VARservico := 10; # Serviço
+set @VARufOrigem := 6;	# Origem do contrato
+set @VARfaturadoPOR := 12; # Faturado por
+
+	SELECT
+#nome, efetiva
+		#ROUND(
+			@VARcampo / 
+			(
+				1 - (SUM(
+				CASE WHEN @VARisencaoICMS = 'SIM' AND nome = 'ICMS'
+					THEN 0
+				ELSE 
+					CASE WHEN @VARisencaoICMS = 'SIM' OR /*(*/@VARestatal = 'SIM'/* AND nome = 'ICMS')*/ THEN efetiva ELSE /*reducao*/ efetiva END 
+				END
+				) / 100)
+			),
+		#,2)
+CASE 
+			WHEN @VARestatal = 'SIM' AND @VARservico IN (10) # FIBRA ACESSA
+				THEN 1
+			WHEN @VARestatal = 'SIM' AND @VARservico IN (4,11,3,5) # FIBRA APAGADA/INSTALAÇÃO/IP DEDICADO/PONTO A PONTO
+				THEN 2
+			WHEN @VARservico IN (4,11,3,5) # FIBRA APAGADA/INSTALAÇÃO/IP DEDICADO/PONTO A PONTO
+				THEN 3
+		ELSE 4 END AS teste # FIBRA ACESA
+	FROM telecom.tcom_imposto
+	INNER JOIN adminti.estado_cidade AS uf_origem ON tcom_imposto.cd_estado_origem = uf_origem.cd_estado
+	INNER JOIN adminti.estado_cidade AS uf_destino ON tcom_imposto.cd_estado = uf_destino.cd_estado
+	WHERE 
+		CASE 
+			WHEN @VARestatal = 'SIM' AND @VARservico IN (10) # FIBRA ACESSA
+				THEN FIND_IN_SET(nome,'ICMS,PIS,COFINS,IR,CSLL')
+			WHEN @VARestatal = 'SIM' AND @VARservico IN (4,11,3,5) # FIBRA APAGADA/INSTALAÇÃO/IP DEDICADO/PONTO A PONTO
+				THEN FIND_IN_SET(nome,'ISS,PIS,COFINS,IR,CSLL')
+			WHEN @VARservico IN (4,11,3,5) # FIBRA APAGADA/INSTALAÇÃO/IP DEDICADO/PONTO A PONTO
+				THEN FIND_IN_SET(nome,'ISS,PIS N CUM.,COFINS N CUM.') 
+		ELSE FIND_IN_SET(nome,'ICMS,PIS,COFINS') END # FIBRA ACESA
+		AND CURDATE() >= data_inicio 
+		AND CURDATE() <= data_fim 
+		AND uf_origem.cd_unidade = @VARufOrigem
+		AND uf_destino.cd_unidade = @VARfaturadoPOR
+		AND tcom_imposto.idServico = @VARservico;

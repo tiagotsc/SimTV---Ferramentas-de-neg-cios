@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry excluding="gmaps/|gmaps/test/lib/|gmaps/test/spec/" kind="src" path=""/>
+    <classpathentry excluding="test/lib/|test/spec/" kind="src" path="gmaps"/>
+    <classpathentry kind="src" path="gmaps/test/lib"/>
+    <classpathentry kind="src" path="gmaps/test/spec"/>
+    <classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+    <classpathentry kind="output" path=""/>
+</classpath>

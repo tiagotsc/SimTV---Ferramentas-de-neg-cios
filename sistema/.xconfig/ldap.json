@@ -1,0 +1,7 @@
+{
+    "host": "192.168.40.3",
+    "domain": "tvcidade",
+    "dn": "DC=tvcidade,DC=com,DC=br",
+    "pwd": "123456"
+
+}

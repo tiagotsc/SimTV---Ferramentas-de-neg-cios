@@ -1,0 +1,63 @@
+#topbar {
+  line-height: 2.5em;
+  border-bottom: 2px solid #c8c8c8;
+  text-align: right;
+  padding-right: 1em;
+  font-size: medium;
+}
+#topbar input[type='date'] {
+  width: 10em;
+}
+#topbar label {
+  font-size: x-small;
+  font-weight: bold;
+  margin: 0 3px;
+}
+#topbar label>input,
+#topbar label>select {
+  margin-left: 3px;
+}
+#contentwrapper {
+  text-align: center;
+}
+#map {
+  display: inline-block;
+  width: 70%;
+  height: 98%;
+  margin: 3px 0;
+  border-radius: 3px;
+}
+#tbwrapper {
+  display: inline-block;
+  width: 28%;
+  vertical-align: top;
+  height: 100%;
+  overflow-y: auto;
+}
+#tbwrapper>table {
+  font-size: small;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5em 0 1em 0;
+  line-height: 2.5em;
+  box-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+}
+#tbwrapper>table td:empty,
+#tbwrapper>table th:empty {
+  display: none;
+}
+#tbwrapper>table td,
+#tbwrapper>table th {
+  border: 1px solid #c8c8c8;
+}
+#tbwrapper>table th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  line-height: 3em;
+}
+#histToggle {
+  text-decoration: underline;
+}
+#tecName {
+  text-transform: capitalize;
+}

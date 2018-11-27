@@ -1,0 +1,487 @@
+#container{
+	width:100%;
+	min-height:100px;
+	display:block;
+	padding:0;margin:0;
+	position:relative;
+	overflow:hidden;
+}
+#topbar{
+	display:block;
+	position:relative;
+	background-color:#f2f1f1;
+	width:100%;
+	line-height:2.5em;
+	height:auto;
+	border-bottom:1px solid #D4D4D4;
+	text-align:right;
+}
+#btwrapper{
+	display:inline-block;
+	margin: 0 20px;
+}
+#map{
+	display:block;
+	position:relative;
+	width:90%;
+	height:200px;
+	margin:5px 5%;
+}
+#tec_name{
+	font-size:medium;
+}
+#bbts{
+	display:block;margin-right:10px;
+}
+#key_container{
+	display:block;
+	position:relative;
+	padding:30px 0;
+	background-color:#D4D4D4;
+	width:100%;
+	text-align:center;
+}
+#key{
+	border:1px solid #5B8FB9 ;
+	border-radius:3px;
+	width:90%;
+	margin:0 5%;
+	font-size:small;
+	text-align:center;
+	line-height:2em;
+}
+
+.schedulebox,#warehouse{
+	display:block;
+	position:relative;
+	margin:5px 2%;
+	padding:10px 0;
+	width:96%;
+	background-color:#D4D4D4;
+	border-radius:3px;
+	border:2px solid #656565;
+}
+.schedulebox{
+	padding:0;
+}
+#warehouse{
+	padding-top:0;
+	
+}
+
+.scheduleLocked{
+	background-color:#55AB74;
+}
+.schedule_action{
+	background-color:rgb(230,230,230);
+}
+.schedule_action>div{
+	margin-bottom:5px;
+}
+.schedule_action button{
+	margin-right: 5px;
+}
+.scheduleinfobox{
+	padding:10px;
+	border-bottom: 1px solid rgb(200,200,200);
+}
+.s_start_at{
+	background-color: black;
+	color:white;
+}
+.scheduledescr{
+	text-align:left;
+	font-style:italic;
+	background-color: rgb(240,240,240);
+}
+.scheduleaddr{
+	cursor:pointer;
+	text-align:right;
+	font-style:italic;
+	color:#172661;
+	background-color: rgb(235,235,235);
+}
+.extrainfo{
+	text-align:right;
+	font-style:italic;
+	background-color: whitesmoke;
+}
+.extrainfo:last-of-type{
+	background-color: rgb(240,240,240);
+}
+td,th{
+	padding:5px 0;
+}
+.sth{
+	text-align:right;
+	padding-right:5px;
+}
+.std0{
+	font-weight:bold;
+	text-align:left;
+	padding-left:5px;
+	width:30%
+}
+.std1{
+	text-align:right;
+	padding-right:5px;
+}
+
+.ostd{
+	padding:2px;
+	border:1px solid #BDBDBD;
+}
+.osturno{
+	color: #0B2161;
+	font-weight: bold;
+	font-size: medium;
+}
+.ostb,.ospaneltb{
+	cursor:pointer;
+	line-height:1.5em;
+	border-collapse:collapse;
+	border:none;
+	width:100%;
+	background-color:white;
+}
+.ospaneltb{
+	font-size:medium;
+	cursor:default;
+	text-transform:capitalize;
+}
+.osp_assname{
+	font-size:medium;
+	line-height:2em;
+	background-color:#d9f0c9;
+	color:#3E5130;
+}
+.osp_tipo{
+	background-color: rgb(100,100,100);
+	color:white;
+	line-height:2em;
+}
+.osobs{
+	text-align:center
+}
+.ospac{
+	font-weight:normal
+}
+textarea{
+	width:95%;
+	margin-left:2px;
+	resize:none;
+	
+}
+.osp_assname{
+	cursor:pointer;
+}
+.osl{
+	text-align:left;
+	padding-left:20px;
+}
+.osr{
+	text-align:right;
+	padding-right:20px;
+}
+.cselector{
+	font-size:medium;	
+}
+
+#key_display{
+	display:block;
+	position:relative;
+	width:96%;
+	margin:10px 2%;
+}
+#emptyschedule{
+	background:url(/lib/img/todo_empty.png) center no-repeat;
+	background-color:#E4E4E4;
+	border-radius:4px;
+	text-align:center;
+	color:#227E40;
+	width:96%;
+	margin:20px 2%;
+	height:300px;
+	font-size:16pt;
+	font-weight:bold;
+	font-style:italic;
+	text-shadow:2px 2px 2px #D0D0D0;
+	line-height:450px;
+	overflow:hidden;	
+}
+#new_status{
+	background-color:#E4E4E4;
+	border-radius:4px;
+	text-align:center;
+	width:96%;
+	margin:20px 2%;
+	font-size:16pt;
+	font-weight:bold;
+	font-style:italic;
+	overflow:hidden;
+	padding:10px 0;
+}
+#new_status>h3{
+	text-align:left;
+	margin-left:10px;
+}
+#stzsv{
+	line-height:40px;
+	text-align:right;
+	margin-right:10px;
+}
+#status_descr{
+	width:90%;
+	margin:10px 5%;
+	font-size:medium;
+	line-height:2em;
+}
+input{
+	font-size:medium;
+	line-height:1.5em;
+}
+.os_eqpt{
+	width:90%;
+}
+
+button{
+	background-color: rgb(230,230,230);
+	border: 1px solid rgb(150,150,150);
+	line-height:2em;
+}
+.ass_history{
+	background-color:white;
+	width:100%;
+	line-height: 1.5em;
+	font-size: small;
+}
+.ass_history th{
+	background-color:rgb(220,255,200);
+	line-height: 2em;
+}
+.ass_history td{
+	padding:3px;
+	border: 1px solid rgb(200,200,200);
+}
+.histr1{
+	background-color: rgb(220,220,220);
+	font-size:medium;font-weight: bold;
+	line-height: 2em;
+}
+.histtd1{
+	width: 100px;
+	text-align: left;
+	font-weight:bold
+}
+
+.tec_item_type{
+	width:98%;
+	margin:3px 1%;
+	background-color:white;
+	border: solid 1px rgb(200,200,200);
+}
+.tec_item_type thead{
+	background-color:rgb(235,235,235);
+}
+.tec_item_type thead:hover{
+	background-color: rgb(240,240,240);
+}
+.tec_item_type tr{
+	border: solid 1px rgb(200,200,200);
+	line-height: 1.5em;
+}
+.tec_item_type td,.tec_item_type th{
+	padding:5px;
+}
+.almox_type_name,.tec_item_name{
+	text-align:left;
+	padding-left:10px;
+}
+.almox_type_count{
+	background-color: rgb(220,220,220);
+	font-weight: bold;
+	cursor: pointer;
+}
+.tec_item_id{
+	font-size:small;
+	cursor: pointer;
+}
+.tec_loading{
+	background: url(/lib/img/loading_16x16.gif) no-repeat center;
+}
+
+.item_selected{
+	background-color: #3F712E;
+	color: white;
+	font-weight: bold;
+}
+#item_options{
+	padding: 10px 0;
+	background-color: whitesmoke;
+	box-shadow: 0 5px 10px rgba(10,10,10,0.2);
+}
+#item_list{
+	margin-top:10px;
+}
+#mytecname{
+	font-weight: bold;
+	display:inline-block;
+	text-shadow: 1px 1px 2px rgba(10,10,10,0.1);
+}
+
+#os_control{
+	display:block;position:relative;
+	margin: 5px 2%;
+	line-height: 2.2em;
+	width: 96%;
+	background-color: #D4D4D4;
+	border-radius: 3px;
+	border: 2px solid #656565;
+}
+
+#os_control>ul{
+	display:block;position:relative;
+	background-color:white;
+	padding: 5px 0;
+}
+#os_control>ul:empty{
+	display:none;
+}
+.tec-visita{
+	display:block;position:relative;
+	margin: 5px 1em;
+	border: 1px solid rgb(150,150,150);
+	text-align: left;
+	text-indent: 1em;
+	background-color: rgb(240,240,240);
+}
+.tec-visita>h4{
+	cursor: pointer;
+}
+.tec-visita>sub{
+	display:block;position:relative;
+	cursor: pointer;
+	vertical-align: sub;
+	font-size: small;
+	color: rgb(100,100,100);
+}
+
+.imgform{
+	text-align: right;
+	background-color: rgb(235,235,235);
+}
+.upform{
+	text-align: right;
+	padding: 5px 0;
+	background-color: rgb(220,220,220);
+	overflow-x:hidden;
+}
+.img-upload-progress{
+	text-align: left;
+	display:block;position:relative;
+	margin: 5px 1em;
+	line-height: 2em;
+	font-size: x-small;
+	border: 1px solid white;
+}
+.img-upload-progress>.thick{
+	display:block;position:relative;
+	background-color: #5F8E5F;
+	width:0;
+	font-weight: bold;
+	overflow-x: visible;
+	color: white;
+}
+.up_img{
+	margin-right: 1em;
+}
+.single-pic{
+	display:inline-block;
+	position:relative;
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid black;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+	height: 82px;
+	width: 82px;
+	margin: 5px;
+	cursor: pointer;
+}
+.single-pic.selected{
+	border: 1px solid #01DF01;
+}
+.img-list{
+	background-color: rgb(100,100,100);
+	padding: 10px 10px;
+	border: 2px solid rgb(150,150,150);
+	min-height: 80px;
+	display:block;
+	position:relative;
+}
+.img-preview{
+	background-color: rgb(50,50,50);
+}
+.img-box{
+	display:block;
+	position:relative;
+	padding: 1em 0;
+	text-align:center;
+	overflow: hidden;
+}
+.preview-menu{
+	background-color: rgba(0,0,0,0.6);
+	color:white;
+	font-size: medium;
+	font-weight: bold;
+	text-align: right;
+	overflow-x: hidden;
+}
+.preview-menu>a{
+	color:white;
+	margin-right: 1em;
+}
+#current_km,#gas_level,#tec_placa{
+	width: 94%;
+	margin: 0 auto;
+	line-height: 2.5em;
+}
+.toggleExtraInfo{
+	background-color: rgb(250,250,250);
+	line-height: 2.5em;
+	text-align: left;
+}
+.toggleExtraInfo>li{
+	background: url(/lib/img/information.png) left top no-repeat;
+	border-bottom: 1px solid rgb(200,200,200);
+}
+.toggleExtraInfo>li>a{
+    margin-left: 35px;
+}
+.extraInfo{
+    margin: 0.5em;
+}
+.extraInfo>li{
+    border: 1px solid rgb(200,200,200);
+    border-radius: 3px;
+    margin-bottom: 0.5em;
+}
+.extraInfo>li>p{
+    line-height: 2em;
+}
+.extraInfo>li>p:first-child{
+    line-height: 2.5em;
+    font-size: large;
+    background-color: rgb(240, 240, 240);
+    padding-left: 1em;
+
+}
+.extraInfo>li>p:nth-child(2){
+    border-top: 1px solid rgb(200,200,200);
+}
+.extraInfo>li>p:last-child{
+    padding-bottom: 1em;
+}
+.extraInfo>li>p>span{
+    color: #08088A;
+    margin: 0 1em;
+}

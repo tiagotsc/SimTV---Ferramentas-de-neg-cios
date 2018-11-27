@@ -1,0 +1,220 @@
+/*~~~~~~~NAvigation~~~~~~~*/
+#head-wrapper{
+	position: fixed;
+	display:block;
+	width:100%;
+	z-index: 10;
+	background: #222;
+	top:0;
+	color: white;
+}
+#head {
+	height: 30px;
+	width:100%;
+	border-bottom: #B3B3B3 solid 1px;
+	overflow: hidden;
+
+}
+#headtitle{
+	display: inline-block;
+	padding: 2px 2px 2px 5px;
+	position: relative;
+	width: auto;
+	height: 24px;
+}
+#headtitle img{
+	width: 100%;
+	height: 100%;
+}
+.navoption,.navtxt{
+	color: #222;
+}
+#navmenu{
+	position: absolute;
+	width: auto;
+	right: 10px;
+	z-index: 99;
+	
+	height:28px;
+	line-height: 28px;
+}
+.navsubmenu{
+	border:transparent solid 1px;
+	border-top: none;
+	z-index: 99;
+	display:inline-block;
+	height:29px;
+	line-height:29px;
+	cursor: pointer;
+	font-size: 10pt;
+	font-weight: bold;
+	position: relative;
+	width: auto;
+	overflow:hidden;
+	text-align:left;
+}
+.navico{
+	background-repeat: no-repeat;
+	background-position: center;
+	display:inline-block;
+	width:30px;
+	height:100%;
+}
+.navsubmenu:hover{
+	background-color: rgba(100,100,100,0.2);
+}
+.submenuactive:hover{
+	background-color: white;
+}
+.tooSmallToShow{
+	display:none;
+}
+.navtxt{
+	display:none;
+	padding-right:10px;
+	white-space: nowrap;
+}
+.navmet>.navico{
+	background-image: url(/lib/img/dashboard.png);
+}
+.navmet.submenuactive>.navico{
+	background-image: url(/lib/img/dashboard_2.png);
+}
+
+.navagenda>.navico{
+	background-image: url(/lib/img/agenda.png);
+}
+.navagenda.submenuactive>.navico{
+	background-image: url(/lib/img/agenda_2.png);
+}
+
+.navsettings>.navico{
+	background-image: url(/lib/img/settings.png);
+}
+.navsettings.submenuactive>.navico{
+	background-image: url(/lib/img/settings_2.png);
+}
+
+.navtools>.navico{
+	background-image: url(/lib/img/tools.png);
+}
+.navtools.submenuactive>.navico{
+	background-image: url(/lib/img/tools_2.png);
+}
+.navsid>.navico{
+	background-image: url(/lib/img/tv.png);
+}
+.navsid.submenuactive>.navico{
+	background-image: url(/lib/img/tv_2.png);
+}
+
+.navuser>.navico{
+	background-image: url(/lib/img/user.png);
+}
+
+.navuser.submenuactive>.navico{
+	background-image: url(/lib/img/user_2.png);
+}
+.submenuactive{
+	border:#B2B2B2 solid 1px;
+	border-top: none;
+	border-bottom: none;
+}
+.submenuactive>.navtxt{
+	display:inline;
+}
+.submenuactive,.navlist{
+	background-color: white;
+	font-size: 10pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navlist{
+	width: auto;
+	position: fixed;
+	display:none;
+	z-index:10;
+	border:#B2B2B2 solid 1px;
+	box-shadow: -5px 5px 10px rgba(100,100,100,0.3);
+}
+.navwrap{
+	display:block;
+	border-top: rgba(100,100,100,0.1) solid 1px;
+	text-align:right;
+	line-height: 2.2em;
+	padding: 0 0 0 10px;
+	text-decoration: none;
+}
+
+.navoption{
+	text-decoration:none;
+	cursor: pointer;
+}
+.navwrap:hover{
+	background-color: rgba(100,100,100,0.1);
+}
+
+.navcheat{
+	margin-left:5px;
+	width:7px;
+	height:100%;
+	display:inline-block;
+	background-color: rgba(100,100,100,0.1);
+}
+.navwrap:hover>.navcheat{
+	background-color:#3C7024;
+}
+
+
+
+/* Header */
+#servertime{
+	display: inline;
+	position:relative;
+	top:0;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:10pt;
+	font-weight:bold;
+	z-index:2;
+	text-align:center;
+}
+
+#pagetitle{
+	position: absolute;
+	display: inline-block;
+	font-size: 10pt;
+	padding: 2px 2px 2px 5px;
+	text-indent: 60px;
+	line-height: 30px;
+	height: 30px;
+	font-weight : bold;
+}
+
+#pagetitle>span{
+	color: rgb(230,230,230);
+}
+#content{
+	width:100%;
+	position:relative;
+	margin: 0;
+	padding: 31px 0;
+}
+
+#foot{
+	font-weight: bold;
+	font-size: 10pt;
+	color:#454545;
+	background-color:white;
+	border-top: solid 1px #C1C1C1;
+	text-indent: 10px;
+	height: 30px;
+	line-height: 30px;
+	width:100%;
+	position:fixed;
+	z-index: 4;
+	bottom:0;
+	left:0;
+}

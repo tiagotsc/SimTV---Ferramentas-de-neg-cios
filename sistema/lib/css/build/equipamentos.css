@@ -1,0 +1,35 @@
+fieldset {
+  border-radius: 3px;
+  border: #666 solid 1px;
+  padding: 5px 0;
+  width: 98%;
+  margin: 5px 1%;
+  text-align: center;
+}
+.bt {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  background-color: #646464;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1px;
+  margin: 10px 0;
+  padding: 0 10px;
+  line-height: 2em;
+  font-weight: bold;
+}
+.bt:hover {
+  background-color: #3F3F80;
+}
+#content {
+  text-align: center;
+}
+#headequip {
+  height: 40px;
+  width: 100%;
+  color: #000000;
+  background: #ff00ff;
+  background-color: #d3d3d3;
+  overflow: hidden;
+}

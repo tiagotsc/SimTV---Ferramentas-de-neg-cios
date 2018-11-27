@@ -1,0 +1,1709 @@
+1461893720TS---><!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--<meta charset="ISO-8859-1">-->   
+    <!--<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ferramentas de neg&oacute;cio</title>
+    
+<link href="http://sistemas.simtv.com.br/sistema/assets/css/bootstrap.css" rel="stylesheet" type="text/css" /><link href="http://sistemas.simtv.com.br/sistema/assets/css/modern-business.css" rel="stylesheet" type="text/css" /><link href="http://sistemas.simtv.com.br/sistema/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="http://sistemas.simtv.com.br/sistema/assets/css/personalizado.css" rel="stylesheet" type="text/css" /><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/jquery-1.10.2.js'></script><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/bootstrap.js'></script><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/modern-business.js'></script><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/util.js'></script><link href="http://sistemas.simtv.com.br/sistema/assets/js/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css" /><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/jquery-ui/jquery-ui.js'></script>    
+
+</head>
+
+<body><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+            <a class="navbar-brand" href="http://sistemas.simtv.com.br/sistema/home/inicio">Ferramentas de neg&oacute;cio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right"><li  class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">CobranÁa e Faturamento<b class="caret"></b></a><ul class="dropdown-menu"><li  ><a href="http://sistemas.simtv.com.br/sistema/cobrancaFaturamento/pesquisaConteudoRetorno" >Pesquisar nos retornos</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/cobrancaFaturamento/arquivo/validaRetorno" >ValidaÁ„o de retornos</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/cobrancaFaturamento/registrosTelecom" >Registros de telecom</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/cobrancaFaturamento/arquivosDuplicados" >Remover arquivos duplicados</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/financeiro/titulo/impressaoTitulo" >Imprimir tÌtulo</a></li></ul></li><li  class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">RelatÛrios<b class="caret"></b></a><ul class="dropdown-menu"><li  ><a href="http://sistemas.simtv.com.br/sistema/relatorio" >Visualizar</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/relatorio/gerenciar" >Gerenciar relatÛrios</a></li></ul></li><li  class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboard<b class="caret"></b></a><ul class="dropdown-menu"><li class="active" ><a href="http://sistemas.simtv.com.br/sistema/dashboard/marketing" >Marketing</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/dashboard/faturamentoCobranca" >CobranÁa e faturamento</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/dashboard/diretoria" >Diretoria</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/dashboard/telefonia" >Telefonia</a></li></ul></li><li  ><a href="http://sistemas.simtv.com.br/sistema/telefonia" >Telefonia</a></li><li  class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Anatel<b class="caret"></b></a><ul class="dropdown-menu"><li  ><a href="http://sistemas.simtv.com.br/sistema/anatel/config" >Configurar par‚metros</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/anatel/formularios" >Gerenciar formul·rios</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/anatel/emailCobranca" >Enviar e-mail cobrando resposta do indicador</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/anatel/calcularIRS" >Calcular e atualizar indicador IRS</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/anatel/xml" >Gerar XML</a></li></ul></li><li  ><a href="http://sistemas.simtv.com.br/sistema/telecom/telecom" >Telecom</a></li><li  class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ura<b class="caret"></b></a><ul class="dropdown-menu"><li  ><a href="http://sistemas.simtv.com.br/sistema/ura/node" >Pesquisar node</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/ura/dashboardNode" >Monitoramento node</a></li></ul></li><li  class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrador<b class="caret"></b></a><ul class="dropdown-menu"><li  ><a href="http://sistemas.simtv.com.br/sistema/perfil/perfis" >Pesquisar perfil</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/usuario/usuarios" >Pesquisar usu·rio</a></li><li  ><a href="http://sistemas.simtv.com.br/sistema/email/recebeEmail" >Recebe e-mail</a></li></ul></li><li  ><a href="http://sistemas.simtv.com.br/sistema/home/logout" >Sair</a></li></ul>        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<div id="usuario"><strong>Ol&aacute;!</strong> TIAGO SILVA COSTA</div><!-- ######################################################################################################## -->
+
+
+    <!-- Page Content -->
+
+    <div class="container">
+        <div class="row">
+            <!-- SIDEBAR
+            <div class="col-md-3 col-sm-4 sidebar">
+                <ul class="nav nav-stacked nav-pills">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="services.html">Services</a>
+                    </li>
+                    <li><a href="contact.php">Contact</a>
+                    </li>
+                    <li class="disabled"><a href="#">Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-1-col.html">1 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-2-col.html">2 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-3-col.html">3 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-4-col.html">4 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-item.html">Single Portfolio Item</a>
+                    </li>
+                    <li class="disabled"><a href="#">Blog</a>
+                    </li>
+                    <li><a href="blog-home-1.html">Blog Home 1</a>
+                    </li>
+                    <li><a href="blog-home-2.html">Blog Home 2</a>
+                    </li>
+                    <li><a href="blog-post.html">Blog Post</a>
+                    </li>
+                    <li class="disabled"><a href="#">Blog</a>
+                    </li>
+                    <li><a href="full-width.html">Full Width Page</a>
+                    </li>
+                    <li class="active"><a href="sidebar.html">Sidebar Page</a>
+                    </li>
+                    <li><a href="faq.html">FAQ</a>
+                    </li>
+                    <li><a href="404.html">404</a>
+                    </li>
+                    <li><a href="pricing.html">Pricing Table</a>
+                    </li>
+                </ul>
+               SIDEBAR -->
+        <!--</div>--><link href="http://sistemas.simtv.com.br/sistema/assets/js/c3js/c3.css" rel="stylesheet" type="text/css" /><link href="http://sistemas.simtv.com.br/sistema/assets/css/css_dashboard.css" rel="stylesheet" type="text/css" /><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/c3js/d3.v3.min.js'></script><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/c3js/c3.js'></script><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/jquery.blockui/jquery.block.ui.js'></script><script type='text/javascript' src='http://sistemas.simtv.com.br/sistema/assets/js/jQuery.print.js'></script><style type="text/css">
+/*.c3-xgrid-line line {
+    stroke: blue;
+}
+.c3-xgrid-line.grid4 line {
+    stroke: pink;
+}
+.c3-xgrid-line.grid4 text {
+    fill: pink;
+}*/
+
+/*.c3-ygrid-line.grid800 line {
+    stroke: green;
+}
+.c3-ygrid-line.grid800 text {
+    fill: green;
+}*/
+
+/*################### RENTABILIZA«√O - INÕCIO #######################*/
+/* Texto */
+.c3-ygrid-line.grid4 text{
+    stroke: #696969;
+}
+
+/* Linha */
+.c3-ygrid-line.grid4 line{
+    stroke: green;
+}
+/*################### RENTABILIZA«√O - FIM #######################*/
+
+.cabecalhoDashboard{
+    text-align: center;
+}
+</style>
+<script type="text/javascript" src="http://sistemas.simtv.com.br/sistema/assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://sistemas.simtv.com.br/sistema/assets/js/jquery.mask.min.js"></script>
+
+            <!--<div class="col-md-9 col-sm-8"> USADO PARA SIDEBAR -->
+            <div class="col-lg-12">
+                
+                <ol class="breadcrumb">
+                    <li><a href="http://sistemas.simtv.com.br/sistema/home/inicio">Principal</a>
+                    </li>
+                    <li class="active">Dashboard / Marketing</li>
+                </ol>
+                <div id="divMain">
+                    <h3>Marketing</h3>
+                    <div id="dashboards">
+                                              <h3 onclick="$('#cd_grafico').val(1), $(this).verificaClick();">Rentabiliza&ccedil;&atilde;o</h3>
+                          <div>
+                            <div class="printDashboard">
+                                <a href="#" onclick="jQuery('#rentabilizacao').print()">Imprimir</a>
+                            </div>
+                            <div class="row dashCamPreechimento">
+                                <div class="col-md-6">
+                                <label for="meta_rentabilizacao">Informe a meta</label><input type="text" name="meta_rentabilizacao" value="" id="meta_rentabilizacao" placeholder="Digite a meta" class="form-control"  />                                </div>
+                                <div class="col-md-6">
+                                <label for="mes_ano_rentabilizacao">Selecione o m&ecirc;s/ano:</label><select name="mes_ano_rentabilizacao" id="mes_ano_rentabilizacao" class="form-control">
+<option value="" selected="selected"></option>
+<option value="03-2016">03/2016</option>
+<option value="04-2016">04/2016</option>
+</select>                                </div>
+                            </div>
+                            <div id="rentabilizacao">
+                                <div class="row">
+                                    <div class="divDashboard" id="chart1"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="rentabilizacaoTela2" class="col-md-6">             
+                                    </div>
+                                    <div id="rentabilizacaoTela3" class="col-md-6">                                
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                                                                  <h3 onclick="$('#cd_grafico').val(3), $(this).verificaClick();">Base de assinantes</h3>
+                          <div>
+                            <div class="printDashboard">
+                                <a href="#" onclick="jQuery('#base_assinantes').print()">Imprimir</a>
+                            </div>
+                            <div id="base_assinantes">
+                                <!-- ###################### Base assinantes consolidado - INÕCIO ###################### -->
+                                <div class="row">
+                                    <h3 class="cabecalhoDashboard"><strong>Resumo da base com sinal e sem sinal</strong></h3> 
+                                    <div class="col-md-8">                      
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">18.887</td>
+                                                    <td class="tdLinhaDireita">-1,64%</td>
+                                                    <td class="tdLinhaDireita">19.020</td>
+                                                    <td class="tdLinhaDireita">0,7%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">19.075&nbsp;</td>
+                                                    <td class="tdVerdeClaro">0,29%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">24.072</td>
+                                                    <td class="tdLinhaDireita">-6,81%</td>
+                                                    <td class="tdLinhaDireita">24.645</td>
+                                                    <td class="tdLinhaDireita">2,38%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">25.101&nbsp;</td>
+                                                    <td class="tdVerdeClaro">1,85%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">8.878</td>
+                                                    <td class="tdLinhaDireita">-7,76%</td>
+                                                    <td class="tdLinhaDireita">9.107</td>
+                                                    <td class="tdLinhaDireita">2,58%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">9.263&nbsp;</td>
+                                                    <td class="tdVerdeClaro">1,71%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">51.837</td>
+                                                    <td class="tdLinhaDireita">-5,16%</td>
+                                                    <td class="tdLinhaDireita">52.772</td>
+                                                    <td class="tdLinhaDireita">1,8%</td>
+                                                    <td class="tdLinhaDireita ">53.439&nbsp;<span title="Meta prevista 55895" class="glyphicon glyphicon-thumbs-down meta_no" aria-hidden="true"></span></td>
+                                                    <td class="">1,26%</td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr><th class="tdMarrom" colspan="6">BASE SEM SINAL<br /> <span style="font-size: 13px;">28-Apr</span></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdMarromClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>At&eacute; 5 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>D&ecirc; 6 &agrave; 15 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>D&ecirc; 16 &agrave; 59 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>Acima 60 dias</strong></td>
+                                                    <td><strong>Total</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">128</td>
+                                                    <td class="tdLinhaDireita">443</td>
+                                                    <td class="tdLinhaDireita">109</td>
+                                                    <td class="tdLinhaDireita">31</td>
+                                                    <td>711</td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">1081</td>
+                                                    <td class="tdLinhaDireita">246</td>
+                                                    <td class="tdLinhaDireita">411</td>
+                                                    <td class="tdLinhaDireita">4</td>
+                                                    <td>1.742</td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">383</td>
+                                                    <td class="tdLinhaDireita">72</td>
+                                                    <td class="tdLinhaDireita">138</td>
+                                                    <td class="tdLinhaDireita">5</td>
+                                                    <td>598</td>
+                                                </tr>
+                                                <tr><td colspan="6"></td></tr>                                                <tr class="tdMarromClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">1592</td>
+                                                    <td class="tdLinhaDireita">761</td>
+                                                    <td class="tdLinhaDireita">658</td>
+                                                    <td class="tdLinhaDireita">40</td>
+                                                    <td>3.051</td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="cinzaEscuro"><th colspan="2"><strong>MOVIMENTA&Ccedil;&Atilde;O DA BASE</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="cinzaMediano"><td colspan="2" style="text-align: left;"><strong>Sa&iacute;da</strong></td></tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Mudan&ccedil;a de endere&ccedil;o</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Baixa por Op&ccedil;&atilde;o</td>
+                                                    <td>44</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Promessa Pagto Vencida</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                                                                <tr class="cinzaMediano"><td colspan="2" style="text-align: left;"><strong>Entrada</strong></td></tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Instala&ccedil;&atilde;o</td>
+                                                    <td>47</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Mudan&ccedil;a de Endere&ccedil;o</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Promessa Pagamento</td>
+                                                    <td>273</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Cancelamento Baixa por Op&ccedil;&atilde;o</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte L&oacute;gico - $</td>
+                                                    <td>385</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte L&oacute;gico - NC</td>
+                                                    <td>7</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte F&iacute;sico - $</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                                                                <tr class="cinzaMediano">
+                                                    <td style="text-align: left;"><strong>Total</strong></td>
+                                                    <td><strong>667</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row"></div>
+                                </div>
+                                <!-- ###################### Base assinantes consolidado - FIM ###################### -->
+                                
+                                <!-- ###################### Base assinantes - Individual - INÕCIO ###################### -->
+                                <div class="row">
+                                    <h3 class="cabecalhoDashboard"><strong>Resumo da base com sinal e sem sinal - Individual</strong></h3> 
+                                    <div class="col-md-8">                      
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="tdVerde"><th colspan="7"><strong>BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% Desvio</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% Desvio</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% Desvio</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">4.701</td>
+                                                    <td class="tdLinhaDireita">-4,22%</td>
+                                                    <td class="tdLinhaDireita">4.759</td>
+                                                    <td class="tdLinhaDireita">1,23%</td>
+                                                    <td class="tdLinhaDireita">4.792</td>
+                                                    <td class="tdVerdeClaro">0,69%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">23.966</td>
+                                                    <td class="tdLinhaDireita">-6,84%</td>
+                                                    <td class="tdLinhaDireita">24.539</td>
+                                                    <td class="tdLinhaDireita">2,39%</td>
+                                                    <td class="tdLinhaDireita">24.995</td>
+                                                    <td class="tdVerdeClaro">1,86%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">8.727</td>
+                                                    <td class="tdLinhaDireita">-7,88%</td>
+                                                    <td class="tdLinhaDireita">8.956</td>
+                                                    <td class="tdLinhaDireita">2,62%</td>
+                                                    <td class="tdLinhaDireita">9.111</td>
+                                                    <td class="tdVerdeClaro">1,73%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">37.394</td>
+                                                    <td class="tdLinhaDireita">-6,76%</td>
+                                                    <td class="tdLinhaDireita">38.254</td>
+                                                    <td class="tdLinhaDireita">2,3%</td>
+                                                    <td class="tdLinhaDireita">38.898</td>
+                                                    <td class="">1,68%</td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="tdMarrom"><th colspan="6">BASE SEM SINAL<br /> <span style="font-size: 13px;">28-Apr</span></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdMarromClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>At&eacute; 5 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>D&ecirc; 6 &agrave; 15 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>D&ecirc; 16 &agrave; 59 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>Acima 60 dias</strong></td>
+                                                    <td><strong>Total</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">121</td>
+                                                    <td class="tdLinhaDireita">25</td>
+                                                    <td class="tdLinhaDireita">70</td>
+                                                    <td class="tdLinhaDireita">20</td>
+                                                    <td>236</td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">1081</td>
+                                                    <td class="tdLinhaDireita">245</td>
+                                                    <td class="tdLinhaDireita">411</td>
+                                                    <td class="tdLinhaDireita">4</td>
+                                                    <td>1.741</td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">383</td>
+                                                    <td class="tdLinhaDireita">72</td>
+                                                    <td class="tdLinhaDireita">138</td>
+                                                    <td class="tdLinhaDireita">5</td>
+                                                    <td>598</td>
+                                                </tr>
+                                                <tr><td colspan="6"></td></tr>                                                <tr class="tdMarromClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">1585</td>
+                                                    <td class="tdLinhaDireita">342</td>
+                                                    <td class="tdLinhaDireita">619</td>
+                                                    <td class="tdLinhaDireita">29</td>
+                                                    <td>2.575</td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="cinzaEscuro"><th colspan="2"><strong>MOVIMENTA&Ccedil;&Atilde;O DA BASE</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="cinzaMediano"><td colspan="2" style="text-align: left;"><strong>Sa&iacute;da</strong></td></tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Mudan&ccedil;a de endere&ccedil;o</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Baixa por Op&ccedil;&atilde;o</td>
+                                                    <td>40</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Promessa Pagto Vencida</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                                                                <tr class="cinzaMediano"><td colspan="2" style="text-align: left;"><strong>Entrada</strong></td></tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Instala&ccedil;&atilde;o</td>
+                                                    <td>47</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte F&iacute;sico  - $</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Mudan&ccedil;a de Endere&ccedil;o</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Promessa Pagamento</td>
+                                                    <td>247</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte L&oacute;gico  - $</td>
+                                                    <td>384</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Cancelamento Baixa por Op&ccedil;&atilde;o</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte L&oacute;gico - NC</td>
+                                                    <td>7</td>
+                                                </tr>
+                                                                                                <tr class="cinzaMediano">
+                                                    <td style="text-align: left;"><strong>Total</strong></td>
+                                                    <td><strong>644</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row"></div>
+                                </div>
+                                <!-- ###################### Base assinantes - Individual - FIM ###################### -->
+                                
+                                <!-- ###################### Base assinantes - Filiado - INÕCIO ###################### -->
+                                <div class="row">
+                                    <h3 class="cabecalhoDashboard"><strong>Resumo da base com sinal e sem sinal - Filiado</strong></h3> 
+                                    <div class="col-md-8">                      
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="tdVerde"><th colspan="7"><strong>BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% Desvio</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% Desvio</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% Desvio</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">14.186</td>
+                                                    <td class="tdLinhaDireita">-0,76%</td>
+                                                    <td class="tdLinhaDireita">14.261</td>
+                                                    <td class="tdLinhaDireita">0,53%</td>
+                                                    <td class="tdLinhaDireita">14.283</td>
+                                                    <td class="tdVerdeClaro">0,15%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">106</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita">106</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita">106</td>
+                                                    <td class="tdVerdeClaro">0%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">151</td>
+                                                    <td class="tdLinhaDireita">-0,66%</td>
+                                                    <td class="tdLinhaDireita">151</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita">152</td>
+                                                    <td class="tdVerdeClaro">0,66%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">14.443</td>
+                                                    <td class="tdLinhaDireita">-0,75%</td>
+                                                    <td class="tdLinhaDireita">14.518</td>
+                                                    <td class="tdLinhaDireita">0,52%</td>
+                                                    <td class="tdLinhaDireita">14.541</td>
+                                                    <td class="">0,16%</td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr><th class="tdMarrom" colspan="6">BASE SEM SINAL<br /> <span style="font-size: 13px;">28-Apr</span></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdMarromClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>At&eacute; 5 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>D&ecirc; 6 &agrave; 15 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>D&ecirc; 16 &agrave; 59 dias</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>Acima 60 dias</strong></td>
+                                                    <td><strong>Total</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">7</td>
+                                                    <td class="tdLinhaDireita">418</td>
+                                                    <td class="tdLinhaDireita">39</td>
+                                                    <td class="tdLinhaDireita">11</td>
+                                                    <td>475</td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td class="tdLinhaDireita">1</td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                                                                <tr class="tdMarromBemClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td class="tdLinhaDireita">0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr><td colspan="6"></td></tr>                                                <tr class="tdMarromClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">7</td>
+                                                    <td class="tdLinhaDireita">419</td>
+                                                    <td class="tdLinhaDireita">39</td>
+                                                    <td class="tdLinhaDireita">11</td>
+                                                    <td>476</td>
+                                                </tr>
+                                                                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="cinzaEscuro"><th colspan="2"><strong>MOVIMENTA&Ccedil;&Atilde;O DA BASE</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="cinzaMediano"><td colspan="2" style="text-align: left;"><strong>Sa&iacute;da</strong></td></tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Baixa por Op&ccedil;&atilde;o</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                                                                <tr class="cinzaMediano"><td colspan="2" style="text-align: left;"><strong>Entrada</strong></td></tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Promessa Pagamento</td>
+                                                    <td>26</td>
+                                                </tr>
+                                                                                                <tr class="cinzaClaro">
+                                                    <td>Pagamento Corte L&oacute;gico  - $</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                                                                <tr class="cinzaMediano">
+                                                    <td style="text-align: left;"><strong>Total</strong></td>
+                                                    <td><strong>23</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row"></div>
+                                </div>
+                                
+                                <!-- ###################### Base assinantes - Consolidada por permissor - INÕCIO ###################### -->
+                                <div class="row">
+                                    <div class="col-md-8"><h3 class="cabecalhoDashboard"><strong>Resumo da base por permissor</strong></h3></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Salvador                   - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">1.402</td>
+                                                    <td class="tdLinhaDireita">-8,43%</td>
+                                                    <td class="tdLinhaDireita">1.442</td>
+                                                    <td class="tdLinhaDireita">2,85%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">1.471</td>
+                                                    <td class="tdVerdeClaro">2,01%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">2.444</td>
+                                                    <td class="tdLinhaDireita">-6,54%</td>
+                                                    <td class="tdLinhaDireita">2.497</td>
+                                                    <td class="tdLinhaDireita">2,17%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">2.521</td>
+                                                    <td class="tdVerdeClaro">0,96%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">4.436</td>
+                                                    <td class="tdLinhaDireita">-1,55%</td>
+                                                    <td class="tdLinhaDireita">4.453</td>
+                                                    <td class="tdLinhaDireita">0,38%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">4.454</td>
+                                                    <td class="tdVerdeClaro">0,02%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">8.282</td>
+                                                    <td class="tdLinhaDireita">-4,28%</td>
+                                                    <td class="tdLinhaDireita">8.392</td>
+                                                    <td class="tdLinhaDireita">1,33%</td>
+                                                    <td class="tdLinhaDireita ">8.446</td>
+                                                    <td class="">0,64%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Feira de Santana           - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">281</td>
+                                                    <td class="tdLinhaDireita">-8,77%</td>
+                                                    <td class="tdLinhaDireita">294</td>
+                                                    <td class="tdLinhaDireita">4,63%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">297</td>
+                                                    <td class="tdVerdeClaro">1,02%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">797</td>
+                                                    <td class="tdLinhaDireita">-9,12%</td>
+                                                    <td class="tdLinhaDireita">836</td>
+                                                    <td class="tdLinhaDireita">4,89%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">857</td>
+                                                    <td class="tdVerdeClaro">2,51%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">329</td>
+                                                    <td class="tdLinhaDireita">-2,66%</td>
+                                                    <td class="tdLinhaDireita">331</td>
+                                                    <td class="tdLinhaDireita">0,61%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">331</td>
+                                                    <td class="tdVerdeClaro">0%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">1.407</td>
+                                                    <td class="tdLinhaDireita">-7,62%</td>
+                                                    <td class="tdLinhaDireita">1.461</td>
+                                                    <td class="tdLinhaDireita">3,84%</td>
+                                                    <td class="tdLinhaDireita ">1.485</td>
+                                                    <td class="">1,64%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Juiz de Fora               - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">1.847</td>
+                                                    <td class="tdLinhaDireita">-6,15%</td>
+                                                    <td class="tdLinhaDireita">1.883</td>
+                                                    <td class="tdLinhaDireita">1,95%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">1.910</td>
+                                                    <td class="tdVerdeClaro">1,43%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">6.424</td>
+                                                    <td class="tdLinhaDireita">-5,65%</td>
+                                                    <td class="tdLinhaDireita">6.557</td>
+                                                    <td class="tdLinhaDireita">2,07%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">6.671</td>
+                                                    <td class="tdVerdeClaro">1,74%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">1.905</td>
+                                                    <td class="tdLinhaDireita">-0,78%</td>
+                                                    <td class="tdLinhaDireita">1.910</td>
+                                                    <td class="tdLinhaDireita">0,26%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">1.908</td>
+                                                    <td class="tdVerdeClaro">-0,1%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">10.176</td>
+                                                    <td class="tdLinhaDireita">-4,87%</td>
+                                                    <td class="tdLinhaDireita">10.350</td>
+                                                    <td class="tdLinhaDireita">1,71%</td>
+                                                    <td class="tdLinhaDireita ">10.489</td>
+                                                    <td class="">1,34%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Cuiab√°                     - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">11</td>
+                                                    <td class="tdLinhaDireita">-8,33%</td>
+                                                    <td class="tdLinhaDireita">12</td>
+                                                    <td class="tdLinhaDireita">9,09%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">12</td>
+                                                    <td class="tdVerdeClaro">0%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">15</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita">15</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">15</td>
+                                                    <td class="tdVerdeClaro">0%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">2.148</td>
+                                                    <td class="tdLinhaDireita">-3,16%</td>
+                                                    <td class="tdLinhaDireita">2.198</td>
+                                                    <td class="tdLinhaDireita">2,33%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">2.206</td>
+                                                    <td class="tdVerdeClaro">0,36%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">2.174</td>
+                                                    <td class="tdLinhaDireita">-3,16%</td>
+                                                    <td class="tdLinhaDireita">2.225</td>
+                                                    <td class="tdLinhaDireita">2,35%</td>
+                                                    <td class="tdLinhaDireita ">2.233</td>
+                                                    <td class="">0,36%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Recife                     - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">534</td>
+                                                    <td class="tdLinhaDireita">-5,65%</td>
+                                                    <td class="tdLinhaDireita">550</td>
+                                                    <td class="tdLinhaDireita">3%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">555</td>
+                                                    <td class="tdVerdeClaro">0,91%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">893</td>
+                                                    <td class="tdLinhaDireita">-5,1%</td>
+                                                    <td class="tdLinhaDireita">909</td>
+                                                    <td class="tdLinhaDireita">1,79%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">925</td>
+                                                    <td class="tdVerdeClaro">1,76%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">3.758</td>
+                                                    <td class="tdLinhaDireita">-1,13%</td>
+                                                    <td class="tdLinhaDireita">3.794</td>
+                                                    <td class="tdLinhaDireita">0,96%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">3.796</td>
+                                                    <td class="tdVerdeClaro">0,05%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">5.185</td>
+                                                    <td class="tdLinhaDireita">-2,32%</td>
+                                                    <td class="tdLinhaDireita">5.253</td>
+                                                    <td class="tdLinhaDireita">1,31%</td>
+                                                    <td class="tdLinhaDireita ">5.276</td>
+                                                    <td class="">0,44%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Olinda                     - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">190</td>
+                                                    <td class="tdLinhaDireita">-7,32%</td>
+                                                    <td class="tdLinhaDireita">193</td>
+                                                    <td class="tdLinhaDireita">1,58%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">195</td>
+                                                    <td class="tdVerdeClaro">1,04%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">391</td>
+                                                    <td class="tdLinhaDireita">-5,33%</td>
+                                                    <td class="tdLinhaDireita">398</td>
+                                                    <td class="tdLinhaDireita">1,79%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">406</td>
+                                                    <td class="tdVerdeClaro">2,01%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">388</td>
+                                                    <td class="tdLinhaDireita">-0,51%</td>
+                                                    <td class="tdLinhaDireita">389</td>
+                                                    <td class="tdLinhaDireita">0,26%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">389</td>
+                                                    <td class="tdVerdeClaro">0%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">969</td>
+                                                    <td class="tdLinhaDireita">-3,87%</td>
+                                                    <td class="tdLinhaDireita">980</td>
+                                                    <td class="tdLinhaDireita">1,14%</td>
+                                                    <td class="tdLinhaDireita ">990</td>
+                                                    <td class="">1,02%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Jaboat√£o                   - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">278</td>
+                                                    <td class="tdLinhaDireita">-7,02%</td>
+                                                    <td class="tdLinhaDireita">283</td>
+                                                    <td class="tdLinhaDireita">1,8%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">291</td>
+                                                    <td class="tdVerdeClaro">2,83%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">387</td>
+                                                    <td class="tdLinhaDireita">-6,07%</td>
+                                                    <td class="tdLinhaDireita">403</td>
+                                                    <td class="tdLinhaDireita">4,13%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">409</td>
+                                                    <td class="tdVerdeClaro">1,49%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">682</td>
+                                                    <td class="tdLinhaDireita">-2,43%</td>
+                                                    <td class="tdLinhaDireita">683</td>
+                                                    <td class="tdLinhaDireita">0,15%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">697</td>
+                                                    <td class="tdVerdeClaro">2,05%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">1.347</td>
+                                                    <td class="tdLinhaDireita">-4,47%</td>
+                                                    <td class="tdLinhaDireita">1.369</td>
+                                                    <td class="tdLinhaDireita">1,63%</td>
+                                                    <td class="tdLinhaDireita ">1.397</td>
+                                                    <td class="">2,05%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Niter√≥i                    - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">489</td>
+                                                    <td class="tdLinhaDireita">-5,96%</td>
+                                                    <td class="tdLinhaDireita">503</td>
+                                                    <td class="tdLinhaDireita">2,86%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">506</td>
+                                                    <td class="tdVerdeClaro">0,6%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">1.209</td>
+                                                    <td class="tdLinhaDireita">-6,71%</td>
+                                                    <td class="tdLinhaDireita">1.246</td>
+                                                    <td class="tdLinhaDireita">3,06%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">1.263</td>
+                                                    <td class="tdVerdeClaro">1,36%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">1.211</td>
+                                                    <td class="tdLinhaDireita">-2,18%</td>
+                                                    <td class="tdLinhaDireita">1.218</td>
+                                                    <td class="tdLinhaDireita">0,58%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">1.231</td>
+                                                    <td class="tdVerdeClaro">1,07%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">2.909</td>
+                                                    <td class="tdLinhaDireita">-4,75%</td>
+                                                    <td class="tdLinhaDireita">2.967</td>
+                                                    <td class="tdLinhaDireita">1,99%</td>
+                                                    <td class="tdLinhaDireita ">3.000</td>
+                                                    <td class="">1,11%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM S√£o Gon√ßalo                - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">518</td>
+                                                    <td class="tdLinhaDireita">-10,69%</td>
+                                                    <td class="tdLinhaDireita">540</td>
+                                                    <td class="tdLinhaDireita">4,25%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">547</td>
+                                                    <td class="tdVerdeClaro">1,3%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">2.014</td>
+                                                    <td class="tdLinhaDireita">-6,41%</td>
+                                                    <td class="tdLinhaDireita">2.049</td>
+                                                    <td class="tdLinhaDireita">1,74%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">2.081</td>
+                                                    <td class="tdVerdeClaro">1,56%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">116</td>
+                                                    <td class="tdLinhaDireita">-8,66%</td>
+                                                    <td class="tdLinhaDireita">117</td>
+                                                    <td class="tdLinhaDireita">0,86%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">120</td>
+                                                    <td class="tdVerdeClaro">2,56%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">2.648</td>
+                                                    <td class="tdLinhaDireita">-7,38%</td>
+                                                    <td class="tdLinhaDireita">2.706</td>
+                                                    <td class="tdLinhaDireita">2,19%</td>
+                                                    <td class="tdLinhaDireita ">2.748</td>
+                                                    <td class="">1,55%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Volta Redonda              - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">2.530</td>
+                                                    <td class="tdLinhaDireita">-7,7%</td>
+                                                    <td class="tdLinhaDireita">2.577</td>
+                                                    <td class="tdLinhaDireita">1,86%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">2.632</td>
+                                                    <td class="tdVerdeClaro">2,13%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">7.740</td>
+                                                    <td class="tdLinhaDireita">-7,15%</td>
+                                                    <td class="tdLinhaDireita">7.916</td>
+                                                    <td class="tdLinhaDireita">2,27%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">8.080</td>
+                                                    <td class="tdVerdeClaro">2,07%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">661</td>
+                                                    <td class="tdLinhaDireita">-1,49%</td>
+                                                    <td class="tdLinhaDireita">667</td>
+                                                    <td class="tdLinhaDireita">0,91%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">668</td>
+                                                    <td class="tdVerdeClaro">0,15%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">10.931</td>
+                                                    <td class="tdLinhaDireita">-6,95%</td>
+                                                    <td class="tdLinhaDireita">11.160</td>
+                                                    <td class="tdLinhaDireita">2,09%</td>
+                                                    <td class="tdLinhaDireita ">11.380</td>
+                                                    <td class="">1,97%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Gravata√≠                   - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">236</td>
+                                                    <td class="tdLinhaDireita">-16,01%</td>
+                                                    <td class="tdLinhaDireita">247</td>
+                                                    <td class="tdLinhaDireita">4,66%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">258</td>
+                                                    <td class="tdVerdeClaro">4,45%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">772</td>
+                                                    <td class="tdLinhaDireita">-13,74%</td>
+                                                    <td class="tdLinhaDireita">808</td>
+                                                    <td class="tdLinhaDireita">4,66%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">841</td>
+                                                    <td class="tdVerdeClaro">4,08%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">41</td>
+                                                    <td class="tdLinhaDireita">-8,89%</td>
+                                                    <td class="tdLinhaDireita">41</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">42</td>
+                                                    <td class="tdVerdeClaro">2,44%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">1.049</td>
+                                                    <td class="tdLinhaDireita">-14,09%</td>
+                                                    <td class="tdLinhaDireita">1.096</td>
+                                                    <td class="tdLinhaDireita">4,48%</td>
+                                                    <td class="tdLinhaDireita ">1.141</td>
+                                                    <td class="">4,11%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Aracaju                    - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">335</td>
+                                                    <td class="tdLinhaDireita">-8,72%</td>
+                                                    <td class="tdLinhaDireita">348</td>
+                                                    <td class="tdLinhaDireita">3,88%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">353</td>
+                                                    <td class="tdVerdeClaro">1,44%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">538</td>
+                                                    <td class="tdLinhaDireita">-6,76%</td>
+                                                    <td class="tdLinhaDireita">551</td>
+                                                    <td class="tdLinhaDireita">2,42%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">565</td>
+                                                    <td class="tdVerdeClaro">2,54%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">3.091</td>
+                                                    <td class="tdLinhaDireita">-1,06%</td>
+                                                    <td class="tdLinhaDireita">3.098</td>
+                                                    <td class="tdLinhaDireita">0,23%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">3.111</td>
+                                                    <td class="tdVerdeClaro">0,42%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">3.964</td>
+                                                    <td class="tdLinhaDireita">-2,56%</td>
+                                                    <td class="tdLinhaDireita">3.997</td>
+                                                    <td class="tdLinhaDireita">0,83%</td>
+                                                    <td class="tdLinhaDireita ">4.029</td>
+                                                    <td class="">0,8%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr><th class="tdVerde" colspan="7"><strong>SIM Paulista                   - BASE COM SINAL</strong></th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"></td>
+                                                    <td class="tdLinhaDireita"><strong>26/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>27/04/2016</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>% DESVIO</strong></td>
+                                                    <td class="tdLinhaDireita"><strong>28/04/2016</strong></td>
+                                                    <td><strong>% DESVIO</strong></td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>COMBO</strong></td>
+                                                    <td class="tdLinhaDireita">227</td>
+                                                    <td class="tdLinhaDireita">-8,1%</td>
+                                                    <td class="tdLinhaDireita">235</td>
+                                                    <td class="tdLinhaDireita">3,52%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">236</td>
+                                                    <td class="tdVerdeClaro">0,43%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>INTERNET</strong></td>
+                                                    <td class="tdLinhaDireita">448</td>
+                                                    <td class="tdLinhaDireita">-9,31%</td>
+                                                    <td class="tdLinhaDireita">460</td>
+                                                    <td class="tdLinhaDireita">2,68%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">467</td>
+                                                    <td class="tdVerdeClaro">1,52%</td>
+                                                </tr>
+                                                                                                <tr class="tdBegeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TV</strong></td>
+                                                    <td class="tdLinhaDireita">121</td>
+                                                    <td class="tdLinhaDireita">-3,2%</td>
+                                                    <td class="tdLinhaDireita">121</td>
+                                                    <td class="tdLinhaDireita">0%</td>
+                                                    <td class="tdLinhaDireita tdVerdeClaro">122</td>
+                                                    <td class="tdVerdeClaro">0,83%</td>
+                                                </tr>
+                                                <tr><td colspan="7"></td></tr>                                                <tr class="tdVerdeClaro">
+                                                    <td class="tdLinhaDireita"><strong>TOTAL</strong></td>
+                                                    <td class="tdLinhaDireita">796</td>
+                                                    <td class="tdLinhaDireita">-8,08%</td>
+                                                    <td class="tdLinhaDireita">816</td>
+                                                    <td class="tdLinhaDireita">2,51%</td>
+                                                    <td class="tdLinhaDireita ">825</td>
+                                                    <td class="">1,1%</td>
+                                                </tr>
+                                                                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- ###################### Base assinantes - Consolidada por permissor - FIM ###################### -->                               
+                                
+                                <!-- ###################### Base assinantes - Filiado - FIM ###################### -->         
+                            </div>
+                          </div>
+                                                                  <h3 onclick="$('#cd_grafico').val(5), $(this).verificaClick(); $(this).reajusteAssinantes();">Reajuste de assinantes</h3>
+                          <div>
+                            <div class="printDashboard">
+                                <a href="#" onclick="jQuery('#div_reaj_assinantes').print()">Imprimir</a>
+                            </div>
+                            <div id="div_reaj_assinantes">
+                                <div class="row">
+                                    <div class="divDashboard" id="chart2"></div>
+                                </div>
+                            </div>
+                          </div>
+                                                            
+                    </div>
+                           <div id="aguarde" style="text-align: center; display: none"><img src="http://sistemas.simtv.com.br/sistema/assets/img/aguarde.gif" /></div>        
+                </div>
+            </div>
+            
+    <input type="hidden" id="cd_grafico" value="" />
+    
+<script type="text/javascript">
+
+function dump(obj) {
+    var out = '';
+    for (var i in obj) {
+        out += i + ": " + obj[i] + "\n";
+    }
+    alert(out);
+}
+
+/* Se aba do dashboard for aberta grava log de acesso */
+$.fn.verificaClick = function() {
+    if(!$(this).hasClass('ui-state-active')) {
+        $.post( "http://sistemas.simtv.com.br/sistema/dashboard/registraAcesso/", { cd_grafico: $("#cd_grafico").val()} );
+    }
+};
+
+$(document).ready(function(){
+    
+    $(function() {
+        $( "#dashboards" ).accordion({
+            //activate: function( event, ui ) {},
+            //beforeActivate: function( event, ui ) {alert(2)},
+            collapsible: true, // Habilita a opÁ„o de expandir e ocultar ao clicar
+            heightStyle: "content",
+            active: false
+        });
+    });
+    
+    //$(".data").mask("00/00/0000");
+    
+    $(".actions").click(function() {
+        $('#aguarde').css({display:"block"});
+    });    
+    
+/*################### RENTABILIZA«√O - INÕCIO #######################*/ 
+    
+    // Gr·fico tela 1   
+    $.fn.graficoTela1Rentabilidade = function() {
+        c3.generate({
+            bindto: '#chart1',
+            data: {
+                //url: 'http://sistemas.simtv.com.br/sistema/assets/c3_test.json',
+                url: 'http://sistemas.simtv.com.br/sistema/ajax/rentabilizacaoTela1/'+$("#mes_ano_rentabilizacao").val(),
+                mimeType: 'json',
+                //onclick: function (d, element) { alert(d.value); },
+                keys: {
+                    x: 'DIA', // it's possible to specify 'x' when category axis
+                    value: ['RENTABILIZACAO']
+                }
+            },
+        	axis: {
+        		x: {
+        			type: 'category'
+        		},
+                 y : {
+                tick: {
+                        format: d3.format(',')
+                    }
+                }            
+        	},
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id) {
+                        var format = id === 'RENTABILIZACAO' ? d3.format(',') : d3.format(',');
+                        return format(value).replace(',', '.').replace(',', '.');
+                    }
+        //            value: d3.format(',') // apply this format to both y and y2
+                }
+            },
+            grid: {
+                y: {
+                    lines: [{value: $("#meta_rentabilizacao").val(), class: 'grid4', text: 'META DI√ÅRIA'}]
+                }
+            }
+        });
+    
+    }; 
+    
+    // Gr·fico tela 2
+    $.fn.graficoTela2Rentabilidade = function(valor) {
+        
+            $.ajax({
+              url: 'http://sistemas.simtv.com.br/sistema/ajax/rentabilizacaoTela2/'+valor,
+              dataType: "json",
+              error: function(res) {
+ 	            //$("#resQtdArquivosDia").html('<span>Erro de execuÁ„o</span>');
+                alert('Erro');
+              },
+              success: function(res) {
+                
+                var conteudoHtml = '';
+                if(res.length > 0){
+                    
+                    conteudoHtml += '<table class="table table-bordered">';
+                    conteudoHtml += '<thead>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<th colspan="3">';
+                    conteudoHtml += '<strong>PRODUTOS MAIS RENTABILIZADOS</strong>';
+                    conteudoHtml += '</th>';
+                    conteudoHtml += '</tr>';
+                    conteudoHtml += '</thead>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<th><strong>PRODUTO</strong></th>';
+                    conteudoHtml += '<th><strong>QUANTIDADE</strong></th>';
+                    conteudoHtml += '<th><strong>RECEITA</strong></th>';
+                    conteudoHtml += '</tr>';
+                    
+                    $.each(res, function() {
+                    
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<td>'+this.PRODUTO+'</td>';
+                    conteudoHtml += '<td>'+this.QTDE+'</td>';
+                    conteudoHtml += '<td>R$ '+this.VLR_TOT+'</td>';
+                    conteudoHtml += '</tr>';
+                    
+                    });
+                    
+                    conteudoHtml += '</table>';
+                    
+                }else{
+                    conteudoHtml += '';
+                }
+                
+                $("#rentabilizacaoTela2").html(conteudoHtml);
+                
+              }
+            });
+        
+    };
+    
+    // Gr·fico tela 3
+    $.fn.graficoTela3Rentabilidade = function(valor) {
+        
+            $.ajax({
+              url: 'http://sistemas.simtv.com.br/sistema/ajax/rentabilizacaoTela3/'+valor,
+              dataType: "json",
+              error: function(res) {
+ 	            //$("#resQtdArquivosDia").html('<span>Erro de execuÁ„o</span>');
+                alert('Erro');
+              },
+              success: function(res) {
+                
+                var conteudoHtml = '';
+                if(res.length > 0){
+                    
+                    conteudoHtml += '<table class="table table-bordered">';
+                    conteudoHtml += '<thead>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<th colspan="3">';
+                    conteudoHtml += '<strong>RENTABILIZA&Ccedil;&Atilde;O '+res[0]["MES"]+'</strong>';
+                    conteudoHtml += '</th>';
+                    conteudoHtml += '</tr>';
+                    conteudoHtml += '</thead>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<th>';
+                    conteudoHtml += '<strong>PER&Iacute;ODO</strong>';
+                    conteudoHtml += '</th>';
+                    conteudoHtml += '<th>';
+                    conteudoHtml += '<strong>'+res[0]["PERIODO_INICIAL"]+'</strong>';
+                    conteudoHtml += '</th>';
+                    conteudoHtml += '<th>';
+                    conteudoHtml += '<strong>'+res[0]["PERIODO_FINAL"]+'</strong>';
+                    conteudoHtml += '</th>';
+                    conteudoHtml += '</tr>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<td colspan="2">TOTAL RENTABILIZA&Ccedil;&Atilde;O</td>';
+                    conteudoHtml += '<td>R$ '+res[0]["TOT_RENTAB"]+'</td>';
+                    conteudoHtml += '</tr>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<td colspan="3">&nbsp;</td>';
+                    conteudoHtml += '</tr>';
+                    conteudoHtml += '<tr>';
+                    conteudoHtml += '<td colspan="2">PROJE&Ccedil;&Atilde;O</td>';
+                    conteudoHtml += '<td>R$ '+res[0]["PROJECAO"]+'</td>';
+                    conteudoHtml += '</tr>';
+                    conteudoHtml += '</table>';
+                    
+                }else{
+                    conteudoHtml += '';
+                }
+                
+                $("#rentabilizacaoTela3").html(conteudoHtml);
+                
+              }
+            });
+        
+    };           
+    
+    // RentabilitaÁ„o aciona gr·ficos atravÈs da combo
+    $("#mes_ano_rentabilizacao").change(function() {
+        
+        if($(this).val() != '' && $("#meta_rentabilizacao").val() != ''){
+            
+            $(this).graficoTela1Rentabilidade();
+            $(this).graficoTela2Rentabilidade($(this).val());
+            $(this).graficoTela3Rentabilidade($(this).val());
+            
+        }else{
+            
+            $("#chart1").html('');
+            $("#rentabilizacaoTela2").html('');
+            $("#rentabilizacaoTela3").html('');
+            
+        }
+        
+    });
+    
+    // RentabilitaÁ„o gr·fico tela 1
+    $("#meta_rentabilizacao").keyup(function() {
+        
+        if($(this).val() != '' && $("#mes_ano_rentabilizacao").val() != ''){
+            
+            $(this).graficoTela1Rentabilidade();
+            $(this).graficoTela2Rentabilidade($("#mes_ano_rentabilizacao").val());
+            $(this).graficoTela3Rentabilidade($("#mes_ano_rentabilizacao").val());
+            
+        }else{
+            
+            $("#chart1").html('');
+            $("#rentabilizacaoTela2").html('');
+            $("#rentabilizacaoTela3").html('');
+            
+        }
+        
+    });
+    
+/*################### RENTABILIZA«√O - FIM #######################*/
+
+/*################### REAJUSTA DE ASSINANTES - INÕCIO #######################*/
+
+    $.fn.reajusteAssinantes = function() {
+        
+        // GR¡FICO BARRA COLADA            
+        chart2 = c3.generate({
+            bindto: '#chart2',
+            data: {
+                //url: 'http://sistemas.simtv.com.br/sistema/assets/c3_test.json',
+                url: 'http://sistemas.simtv.com.br/sistema/ajax/reajustadosAssinantes/',
+                mimeType: 'json',
+                type: 'bar',
+                x : 'meses',
+                columns: ['meses','Qtde']
+            },
+            axis: {
+                x: {
+                    type: 'category' // this needed to load string x value
+                }/*,
+                 y : {
+                tick: {
+                        format: d3.format(",")
+                    }
+                }*/
+            }/*,
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id) {
+                        var format = id === 'Qtde' ? d3.format(',') : d3.format(',');
+                        return format(value).replace(',', '.').replace(',', '.');
+                    }
+        //            value: d3.format(',') // apply this format to both y and y2
+                }
+            }*/
+        });    
+        
+    };
+
+/*################### REAJUSTA DE ASSINANTES - FIM #######################*/
+   
+   
+    
+});
+
+
+</script>
+        </div> <!-- row -->
+        <div class="row" style="height: 100px;"></div>
+    </div><!-- container -->
+
+<script type="text/javascript">
+/*
+$(document).ready(function(e) {
+
+    $(window).unload(function(){
+      $.post( "http://sistemas.simtv.com.br/sistema/home/logout" );
+    });
+
+});
+*/
+</script>
+
+<!--
+    <div class="container">
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+-->    
+    <!-- /.container -->    </body>
+
+</html>

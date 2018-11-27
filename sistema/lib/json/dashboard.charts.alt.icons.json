@@ -1,0 +1,42 @@
+[
+	{
+		"from": "cad_inst_diff",
+		"to": "cad_inst_diff_groups",
+		"cssClass": "alt-imb1",
+		"title": "Mostrar por produto"
+	},
+	{
+		"from": "cad_inst_diff_groups",
+		"to": "cad_inst_diff",
+		"cssClass": "alt-imb2",
+		"title": "Mostrar unificado"
+	},
+
+	{
+		"from": "imb",
+		"to": "imb_groups",
+		"cssClass": "alt-imb1",
+		"title": "Mostrar por produto"
+	},
+	{
+		"from": "imb_groups",
+		"to": "imb",
+		"cssClass": "alt-imb2",
+		"title": "Mostrar unificado"
+	},
+
+
+	{
+		"from": "backlog_r",
+		"to": "backlog_r_realtime",
+		"cssClass": "alt-backlogr1",
+		"title": "Tempo Real"
+	},
+
+	{
+		"from": "backlog_r_realtime",
+		"to": "backlog_r",
+		"cssClass": "alt-backlogr2",
+		"title": "Extração Diária"
+	}
+]

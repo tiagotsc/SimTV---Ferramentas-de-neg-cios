@@ -1,0 +1,65 @@
+#loginbox {
+  display: block;
+  position: relative;
+  height: auto;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: 1px solid #c8c8c8;
+  width: 70%;
+  margin: 100px 15%;
+  color: #323232;
+  font-weight: bold;
+  overflow: hidden;
+}
+#innerbox {
+  margin: 20px;
+  text-align: center;
+}
+form>table {
+  width: 80%;
+  margin: 10px 10%;
+}
+.td {
+  padding: 5px;
+}
+.td1 {
+  text-align: right;
+  width: 40%;
+}
+.td2 {
+  text-align: left;
+  width: 60%;
+}
+.td3 {
+  text-align: center;
+}
+input {
+  font-size: 12pt;
+  line-height: 2em;
+}
+.bt {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  background-color: #646464;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1px;
+  margin: 10px 0;
+  padding: 0 10px;
+  line-height: 2em;
+  font-weight: bold;
+}
+.bt:hover {
+  background-color: #3F3F80;
+}
+.btdiv {
+  display: block;
+  position: relative;
+  text-align: center;
+  line-height: 3em;
+  font-size: medium;
+}
+form>table input {
+  width: 15em;
+}

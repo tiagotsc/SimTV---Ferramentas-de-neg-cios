@@ -1,0 +1,14 @@
+#content {
+  padding-top: 113px;
+}
+#theader {
+  top: 90px;
+  left: 0;
+}
+.bklog_hist_selector {
+  overflow: hidden;
+  position: fixed;
+  z-index: 3;
+  top: 58px;
+  left: 0;
+}

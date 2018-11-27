@@ -1,0 +1,369 @@
+# IST - REAJUSTE ANUAL = ACOMULADO DE 12 MESES
+SELECT 
+#tcom_contrato_valor.idContrato,
+tcom_indice_reajuste.nome,
+secHist.mesAno AS mesAnoAnterior,
+secHist.acomDozeMeses AS acomDozeMesesAnterior,
+priHist.mesAno,
+#priHist.indice,
+#priHist.acomAno,
+priHist.acomDozeMeses,
+tcom_contrato.numero,
+tcom_contrato_valor.mens_atual_sem_imposto AS valor_atual,
+ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4) * 100 AS porcApl,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) AS valor_reaj,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) - tcom_contrato_valor.mens_atual_sem_imposto AS valor_retro,
+timestampdiff(month,data_inicio,data_fim) AS qtd_meses,
+tcom_contrato.data_inicio,
+tcom_contrato.data_fim,
+tcom_contrato.status AS status
+FROM tcom_contrato 
+INNER JOIN tcom_contrato_valor ON tcom_contrato_valor.idContrato = tcom_contrato.id
+INNER JOIN tcom_indice_reajuste_hist AS priHist ON priHist.idindicereajuste = tcom_contrato_valor.idIndiceReajuste
+INNER JOIN tcom_indice_reajuste_hist AS secHist ON priHist.idIndiceReajuste = secHist.idIndiceReajuste AND secHist.mesAno = ADDDATE(priHist.mesAno, INTERVAL -1 YEAR)
+INNER JOIN tcom_indice_reajuste ON tcom_indice_reajuste.id = priHist.idIndiceReajuste
+WHERE 
+tcom_contrato_valor.idOper NOT IN (
+	SELECT id FROM tcom_oper WHERE estatal = 'SIM'
+)
+AND priHist.idIndiceReajuste = 3 # IST
+AND priHist.status = 'A'
+AND secHist.status = 'A'
+#AND tcom_contrato_valor.mes_reajuste = SUBSTR(CURDATE(),6,2)#SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),6,2)
+/*AND 
+	CASE 
+		WHEN tcom_contrato_valor.mes_reajuste+2 = 13 
+			THEN 1
+		WHEN tcom_contrato_valor.mes_reajuste+2 = 14
+			THEN 2
+	ELSE tcom_contrato_valor.mes_reajuste+2 END = SUBSTR(CURDATE(),6,2)*/
+AND tcom_contrato_valor.mes_reajuste = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH), 6,2)
+AND tcom_contrato.status = 'A'
+AND timestampdiff(month,data_inicio,data_fim) >= 12 
+AND timestampdiff(month,data_inicio,CURDATE()) >= 12
+#AND data_fim > CURDATE()
+AND faturado_siga = 'NAO'
+AND tcom_contrato_valor.idRegraReajuste = 1
+AND SUBSTR(priHist.mesano, 1,7) = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),1,7) # PEGA DETERMINADO MÊS DO ÍNDICE
+#AND tcom_indice_reajuste_hist.idindicereajuste = 3
+#AND data_inicio LIKE '2017%'
+#AND SUBSTR(data_inicio,6,2) = '08'
+ORDER BY data_inicio
+
+#################################################################################################################################
+
+# IST - REAJUSTE ANUAL = MENOS DE UM ANO ATIVO
+SELECT 
+#tcom_contrato_valor.idContrato,
+tcom_indice_reajuste.nome,
+secHist.mesAno AS mesAnoAnterior,
+secHist.acomDozeMeses AS acomDozeMesesAnterior,
+priHist.mesAno,
+#priHist.indice,
+#priHist.acomAno,
+priHist.acomDozeMeses,
+tcom_contrato.numero,
+tcom_contrato_valor.mens_atual_sem_imposto AS valor_atual,
+ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4) * 100 AS porcApl,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) AS valor_reaj,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) - tcom_contrato_valor.mens_atual_sem_imposto AS valor_retro,
+timestampdiff(month,data_inicio,CURDATE()) AS meses_ativos,
+timestampdiff(month,data_inicio,data_fim) AS qtd_meses,
+tcom_contrato.data_inicio,
+tcom_contrato.data_fim,
+tcom_contrato.status AS status
+FROM tcom_contrato 
+INNER JOIN tcom_contrato_valor ON tcom_contrato_valor.idContrato = tcom_contrato.id
+INNER JOIN tcom_indice_reajuste_hist AS priHist ON priHist.idindicereajuste = tcom_contrato_valor.idIndiceReajuste
+INNER JOIN tcom_indice_reajuste_hist AS secHist ON priHist.idIndiceReajuste = secHist.idIndiceReajuste AND secHist.mesAno = CONCAT(SUBSTR(tcom_contrato.data_inicio, 1,8),'01')
+INNER JOIN tcom_indice_reajuste ON tcom_indice_reajuste.id = priHist.idIndiceReajuste
+WHERE 
+tcom_contrato_valor.idOper NOT IN (
+	SELECT id FROM tcom_oper WHERE estatal = 'SIM'
+)
+AND tcom_contrato.status = 'A'
+AND tcom_contrato_valor.mes_reajuste = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH), 6,2)
+AND priHist.idIndiceReajuste = 3 # IST
+AND priHist.status = 'A'
+AND secHist.status = 'A'
+AND timestampdiff(month,data_inicio,CURDATE()) < 12
+AND data_inicio < CURDATE()
+AND data_fim > CURDATE()
+AND faturado_siga = 'NAO'
+AND tcom_contrato_valor.idRegraReajuste = 1
+AND SUBSTR(priHist.mesano, 1,7) = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),1,7) # PEGA DETERMINADO MÊS DO ÍNDICE
+#AND data_inicio LIKE '2017%'
+#AND SUBSTR(data_inicio,6,2) = '08'
+ORDER BY data_inicio
+
+#################################################################################################################################
+
+# IST - ANIVERSÁRIO DO CIRCUITO
+SELECT 
+#tcom_contrato_valor.idContrato,
+tcom_indice_reajuste.nome,
+secHist.mesAno AS mesAnoAnterior,
+secHist.acomDozeMeses AS acomDozeMesesAnterior,
+priHist.mesAno,
+#priHist.indice,
+#priHist.acomAno,
+priHist.acomDozeMeses,
+tcom_contrato.numero,
+tcom_contrato_valor.mens_atual_sem_imposto AS valor_atual,
+ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4) * 100 AS porcApl,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) AS valor_reaj,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) - tcom_contrato_valor.mens_atual_sem_imposto AS valor_retro,
+timestampdiff(month,data_inicio,data_fim) AS qtd_meses,
+tcom_contrato.data_inicio,
+tcom_contrato.data_fim,
+tcom_contrato.status AS status
+FROM tcom_contrato 
+INNER JOIN tcom_contrato_valor ON tcom_contrato_valor.idContrato = tcom_contrato.id
+INNER JOIN tcom_indice_reajuste_hist AS priHist ON priHist.idindicereajuste = tcom_contrato_valor.idIndiceReajuste
+INNER JOIN tcom_indice_reajuste_hist AS secHist ON priHist.idIndiceReajuste = secHist.idIndiceReajuste AND secHist.mesAno = ADDDATE(priHist.mesAno, INTERVAL -1 YEAR)
+INNER JOIN tcom_indice_reajuste ON tcom_indice_reajuste.id = priHist.idIndiceReajuste
+WHERE 
+tcom_contrato_valor.idOper NOT IN (
+	SELECT id FROM tcom_oper WHERE estatal = 'SIM'
+)
+AND tcom_contrato.status = 'A'
+AND priHist.idIndiceReajuste = 3 # IST
+AND priHist.status = 'A'
+AND secHist.status = 'A'
+#AND data_fim > CURDATE()
+AND faturado_siga = 'NAO'
+AND tcom_contrato_valor.idRegraReajuste = 3
+#AND data_inicio LIKE '2017%'
+AND SUBSTR(data_inicio,6,2) = SUBSTR(DATE_ADD(CURDATE(),INTERVAL -2 MONTH),6,2)
+AND SUBSTR(priHist.mesano, 1,7) = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),1,7)
+AND SUBSTR(tcom_contrato.data_inicio,1,4) < SUBSTR(CURDATE(),1,4)
+ORDER BY data_inicio
+
+#################################################################################################################################
+
+# IGP-DI / IGP-M - REAJUSTE ANUAL = ACOMULADO DE 12 MESES
+SELECT 
+#tcom_contrato_valor.idContrato,
+tcom_indice_reajuste.nome,
+priHist.mesAno,
+#priHist.acomAno,
+#priHist.acomDozeMeses,
+tcom_contrato.numero,
+tcom_contrato_valor.mens_atual_sem_imposto AS valor_atual,
+priHist.acomDozeMeses AS porcApl,
+CASE 
+	WHEN priHist.acomDozeMeses > 0
+		THEN ROUND(mens_atual_sem_imposto + (mens_atual_sem_imposto * (priHist.acomDozeMeses / 100)), 2)
+ELSE mens_atual_sem_imposto END AS valor_reaj,
+CASE 
+	WHEN priHist.acomDozeMeses > 0
+		THEN ROUND((mens_atual_sem_imposto + (mens_atual_sem_imposto * (priHist.acomDozeMeses / 100)))-mens_atual_sem_imposto, 2)
+ELSE 0 END AS valor_retro,
+timestampdiff(month,data_inicio,data_fim) AS qtd_meses,
+tcom_contrato.data_inicio,
+tcom_contrato.data_fim,
+tcom_contrato.status AS status
+FROM tcom_contrato 
+INNER JOIN tcom_contrato_valor ON tcom_contrato_valor.idContrato = tcom_contrato.id
+INNER JOIN tcom_indice_reajuste_hist AS priHist ON priHist.idindicereajuste = tcom_contrato_valor.idIndiceReajuste
+INNER JOIN tcom_indice_reajuste ON tcom_indice_reajuste.id = priHist.idIndiceReajuste
+WHERE 
+tcom_contrato_valor.idOper NOT IN (
+	SELECT id FROM tcom_oper WHERE estatal = 'SIM'
+)
+AND priHist.idIndiceReajuste IN (1,4) # IGP-M / IGP-DI
+AND priHist.status = 'A'
+#AND tcom_contrato_valor.mes_reajuste = SUBSTR(CURDATE(),6,2)#SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),6,2)
+/*AND 
+	CASE 
+		WHEN tcom_contrato_valor.mes_reajuste+2 = 13 
+			THEN 1
+		WHEN tcom_contrato_valor.mes_reajuste+2 = 14
+			THEN 2
+	ELSE tcom_contrato_valor.mes_reajuste+2 END = SUBSTR(CURDATE(),6,2)*/
+AND tcom_contrato_valor.mes_reajuste = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH), 6,2)
+AND tcom_contrato.status = 'A'
+AND timestampdiff(month,data_inicio,data_fim) >= 12 
+AND timestampdiff(month,data_inicio,CURDATE()) >= 12
+#AND data_fim > CURDATE()
+AND faturado_siga = 'NAO'
+AND tcom_contrato_valor.idRegraReajuste = 1
+AND SUBSTR(priHist.mesano, 1,7) = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),1,7) # PEGA DETERMINADO MÊS DO ÍNDICE
+#AND tcom_indice_reajuste_hist.idindicereajuste = 3
+#AND data_inicio LIKE '2017%'
+#AND SUBSTR(data_inicio,6,2) = '08'
+ORDER BY data_inicio
+
+#################################################################################################################################
+
+# IGP-DI / IGP-M - REAJUSTE ANUAL = MENOS DE UM ANO ATIVO
+SELECT 
+#tcom_contrato_valor.idContrato,
+tcom_indice_reajuste.nome,
+priHist.mesAno,
+#priHist.acomAno,
+#priHist.acomDozeMeses,
+tcom_contrato.numero,
+tcom_contrato_valor.mens_atual_sem_imposto AS valor_atual,
+calculaReajuste(tcom_contrato_valor.idIndiceReajuste, tcom_contrato.data_inicio) * 100 AS porcApl,
+CASE 
+	WHEN calculaReajuste(tcom_contrato_valor.idIndiceReajuste, tcom_contrato.data_inicio) > 0
+		THEN ROUND(mens_atual_sem_imposto + (mens_atual_sem_imposto * calculaReajuste(tcom_contrato_valor.idIndiceReajuste, tcom_contrato.data_inicio)), 2)
+ELSE mens_atual_sem_imposto END AS valor_reaj,
+CASE 
+	WHEN calculaReajuste(tcom_contrato_valor.idIndiceReajuste, tcom_contrato.data_inicio) > 0
+		THEN ROUND((mens_atual_sem_imposto + (mens_atual_sem_imposto * calculaReajuste(tcom_contrato_valor.idIndiceReajuste, tcom_contrato.data_inicio)))-mens_atual_sem_imposto, 2)
+ELSE 0 END AS valor_retro,
+timestampdiff(month,data_inicio,data_fim) AS qtd_meses,
+tcom_contrato.data_inicio,
+tcom_contrato.data_fim,
+tcom_contrato.status AS status
+FROM tcom_contrato 
+INNER JOIN tcom_contrato_valor ON tcom_contrato_valor.idContrato = tcom_contrato.id
+INNER JOIN tcom_indice_reajuste_hist AS priHist ON priHist.idindicereajuste = tcom_contrato_valor.idIndiceReajuste
+INNER JOIN tcom_indice_reajuste ON tcom_indice_reajuste.id = priHist.idIndiceReajuste
+WHERE 
+tcom_contrato_valor.idOper NOT IN (
+	SELECT id FROM tcom_oper WHERE estatal = 'SIM'
+)
+AND tcom_contrato.status = 'A'
+AND tcom_contrato_valor.mes_reajuste = SUBSTR(ADDDATE('2017-04-01', INTERVAL -2 MONTH), 6,2)
+AND priHist.idIndiceReajuste IN (1,4) # IGP-M / IGP-DI
+AND priHist.status = 'A'
+AND timestampdiff(month,data_inicio,'2017-04-01') < 12
+AND data_inicio < '2017-04-01'
+AND data_fim > '2017-04-01'
+AND faturado_siga = 'NAO'
+AND tcom_contrato_valor.idRegraReajuste = 1
+AND SUBSTR(priHist.mesano, 1,7) = SUBSTR(ADDDATE('2017-04-01', INTERVAL -2 MONTH),1,7) # PEGA DETERMINADO MÊS DO ÍNDICE
+#AND data_inicio LIKE '2017%'
+#AND SUBSTR(data_inicio,6,2) = '08'
+ORDER BY data_inicio
+
+#################################################################################################################################
+
+# IGP-DI / IGP-M - ANIVERSÁRIO DO CIRCUITO
+SELECT 
+#tcom_contrato_valor.idContrato,
+tcom_indice_reajuste.nome,
+priHist.mesAno,
+#priHist.indice,
+#priHist.acomAno,
+priHist.acomDozeMeses,
+tcom_contrato.numero,
+tcom_contrato_valor.mens_atual_sem_imposto AS valor_atual,
+priHist.acomDozeMeses AS porcApl,
+CASE 
+	WHEN priHist.acomDozeMeses > 0
+		THEN ROUND(mens_atual_sem_imposto + (mens_atual_sem_imposto * (priHist.acomDozeMeses / 100)), 2)
+ELSE mens_atual_sem_imposto END AS valor_reaj,
+CASE 
+	WHEN priHist.acomDozeMeses > 0
+		THEN ROUND((mens_atual_sem_imposto + (mens_atual_sem_imposto * (priHist.acomDozeMeses / 100)))-mens_atual_sem_imposto, 2)
+ELSE 0 END AS valor_retro,
+/*ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4) * 100 AS porcApl,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) AS valor_reaj,
+ROUND(mens_atual_sem_imposto+(mens_atual_sem_imposto * (ROUND(((priHist.acomDozeMeses / secHist.acomDozeMeses)-1),4))), 2) - tcom_contrato_valor.mens_atual_sem_imposto AS valor_retro,*/
+timestampdiff(month,data_inicio,data_fim) AS qtd_meses,
+tcom_contrato.data_inicio,
+tcom_contrato.data_fim,
+tcom_contrato.status AS status
+FROM tcom_contrato 
+INNER JOIN tcom_contrato_valor ON tcom_contrato_valor.idContrato = tcom_contrato.id
+INNER JOIN tcom_indice_reajuste_hist AS priHist ON priHist.idindicereajuste = tcom_contrato_valor.idIndiceReajuste
+INNER JOIN tcom_indice_reajuste ON tcom_indice_reajuste.id = priHist.idIndiceReajuste
+WHERE 
+tcom_contrato_valor.idOper NOT IN (
+	SELECT id FROM tcom_oper WHERE estatal = 'SIM'
+)
+AND tcom_contrato.status = 'A'
+AND priHist.idIndiceReajuste IN (1,4) # IGP-M / IGP-DI
+AND priHist.status = 'A'
+#AND data_fim > CURDATE()
+AND faturado_siga = 'NAO'
+AND tcom_contrato_valor.idRegraReajuste = 3
+#AND data_inicio LIKE '2017%'
+AND SUBSTR(data_inicio,6,2) = SUBSTR(DATE_ADD(CURDATE(),INTERVAL -2 MONTH),6,2)
+AND SUBSTR(priHist.mesano, 1,7) = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),1,7)
+AND SUBSTR(tcom_contrato.data_inicio,1,4) < SUBSTR(CURDATE(),1,4)
+ORDER BY data_inicio
+
+#################################################################################################################################
+
+SELECT 
+CASE 
+	WHEN tcom_contrato_valor.mes_reajuste+2 = 13 
+		THEN 1
+	WHEN tcom_contrato_valor.mes_reajuste+2 = 14
+		THEN 2
+ELSE tcom_contrato_valor.mes_reajuste+2 END AS mesMaisDois 
+FROM tcom_contrato_valor WHERE mes_reajuste IS NOT NULL
+
+UPDATE tcom_contrato_valor SET mes_reajuste = 8 WHERE mes_reajuste IS NOT NULL
+
+SELECT numero,designacao FROM tcom_contrato INNER JOIN tcom_circuito ON tcom_contrato.idCircuito = tcom_circuito.id WHERE tcom_contrato.id IN (
+2777,
+3385,
+3360,
+3355,
+3403
+)
+
+
+
+#SELECT * FROM tcom_contrato WHERE /*data_inicio LIKE '2017%' AND*/ data_fim > CURDATE() AND status = 'A'
+# SELEÇÃO DO IMPOSTO
+SELECT 
+acomAno
+FROM tcom_indice_reajuste_hist 
+WHERE  
+SUBSTR(mesano, 1,7) = SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH),1,7)
+AND idindicereajuste = 3
+
+SELECT * FROM tcom_indice_reajuste_hist
+
+
+## FUNÇÃO REAJUSTE
+SET @a := 0;
+SELECT
+CASE 
+	WHEN a != 0 AND b != 0 AND c = 0 AND d = 0 AND e = 0 AND f = 0 AND g = 0 AND h = 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d = 0 AND e = 0 AND f = 0 AND g = 0 AND h = 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e = 0 AND f = 0 AND g = 0 AND h = 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c * d, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e != 0 AND f = 0 AND g = 0 AND h = 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c * d * e, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e != 0 AND f != 0 AND g = 0 AND h = 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c * d * e * f, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e != 0 AND f != 0 AND g != 0 AND h = 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c * d * e * f * g, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e != 0 AND f != 0 AND g != 0 AND h != 0 AND i = 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c * d * e * f * g * h, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e != 0 AND f != 0 AND g != 0 AND h != 0 AND i != 0 AND j = 0 AND k = 0
+		THEN (ROUND(a * b * c * d * e * f * g * h * i, 4) - 1) * 100
+	WHEN a != 0 AND b != 0 AND c != 0 AND d != 0 AND e != 0 AND f != 0 AND g != 0 AND h != 0 AND i != 0 AND j != 0 AND k = 0
+		THEN (ROUND(a * b * c * d * e * f * g * h * i * j, 4) - 1) * 100
+ELSE (ROUND(a * b * c * d * e * f * g * h * i * j * k, 4) - 1) * 100 END AS valor
+FROM (
+	SELECT
+	MAX(IF(cont = 1, valor, 0)) AS 'a',
+	MAX(IF(cont = 2, valor, 0)) AS 'b',
+	MAX(IF(cont = 3, valor, 0)) AS 'c',
+	MAX(IF(cont = 4, valor, 0)) AS 'd',
+	MAX(IF(cont = 5, valor, 0)) AS 'e',
+	MAX(IF(cont = 6, valor, 0)) AS 'f',
+	MAX(IF(cont = 7, valor, 0)) AS 'g',
+	MAX(IF(cont = 8, valor, 0)) AS 'h',
+	MAX(IF(cont = 9, valor, 0)) AS 'i',
+	MAX(IF(cont = 10, valor, 0)) AS 'j',
+	MAX(IF(cont = 11, valor, 0)) AS 'k'
+	FROM (
+		SELECT 
+		(@a := @a + 1) cont,
+		ROUND(indice/100, 4)+1 AS valor, tcom_indice_reajuste_hist.*
+		FROM tcom_indice_reajuste_hist
+		WHERE idIndiceReajuste = 4 AND mesAno BETWEEN CONCAT(SUBSTR('2017-03-21', 1,8),'01') AND CONCAT(SUBSTR(ADDDATE(CURDATE(), INTERVAL -2 MONTH), 1,8),'01')
+	) resp
+) AS final

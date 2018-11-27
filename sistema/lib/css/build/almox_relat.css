@@ -1,0 +1,124 @@
+html {
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+#pdflink {
+  display: none;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: auto;
+  line-height: 2em;
+  padding: 0 1em;
+  background-color: white;
+  font-size: 9pt;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.td-sim-logo {
+  height: 4em;
+  width: 8em;
+}
+.relat-title-tb {
+  page-break-before: always;
+}
+.relat-title-tb:first-of-type {
+  page-break-before: avoid;
+}
+.relat-title-tb,
+.relat-items-tb {
+  border-collapse: collapse;
+  border: 1px solid #c8c8c8;
+  width: 100%;
+  color: #323232;
+}
+.relat-items-tb {
+  margin: 5px auto;
+  font-size: 9pt;
+  text-align: left;
+}
+.relat-title-tb td,
+.relat-items-tb th,
+.relat-items-tb td {
+  padding: 5px;
+  border: 1px solid #c8c8c8;
+}
+.td-relat-name {
+  font-size: 14pt;
+  font-weight: bold;
+  background-color: #dcdcdc;
+}
+.td-relat-dia {
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+.td-relat-cidade,
+.td-relat-tec>div {
+  font-weight: bold;
+}
+.td-relat-periodo {
+  width: 15em;
+}
+.td-relat-tec>sub {
+  line-height: 1.2em;
+  font-size: 8pt;
+}
+.th-relat-val,
+.td-relat-val {
+  width: 100px;
+  text-align: center;
+}
+.th-relat-itemcod {
+  width: 100px;
+}
+.th-relat-val>div {
+  font-weight: bold;
+}
+.th-relat-val {
+  line-height: 1.3em;
+  font-size: 8pt;
+}
+.relat-sign-ul {
+  text-align: center;
+}
+.relat-sign-ul>li {
+  display: inline-block;
+  width: 49%;
+}
+.relat-sign-line {
+  width: 96%;
+  margin: auto;
+  height: 3em;
+  border-bottom: 1px solid #969696;
+}
+.relat-sign-descr {
+  margin-top: 5px;
+  font-size: 9pt;
+  font-weight: bold;
+}
+.relat-sign-name {
+  font-size: 8pt;
+  color: #646464;
+}
+.page-footer {
+  display: block;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #646464;
+}

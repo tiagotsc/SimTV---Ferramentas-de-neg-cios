@@ -1,0 +1,131 @@
+<div id='tec_mes' style="display:none" title='Técnico'>
+    <div id="tec_mes-tabs">
+        <ul>
+            <li><a href="#tec_mes-hist">Histórico</a></li>
+            <li><a href="#tec_mes-diag">Diagnóstico</a></li>
+        </ul>
+        <div id="tec_mes-hist">
+            <div id='tec_mes-hist-list'></div>
+        </div>
+        <div id="tec_mes-diag">
+            <div>
+                <table class='tec_mes-diag-tb' style='border-collapse: collapse;'>
+                    <tr>
+                        <td style='border-radius:0;' class='tec_mes-diag-tb-tt'>TOTAL de visitas</td>
+                        <td style='border-radius:0;' class='tec_mes-diag-tb-tt'>PRODUÇÃO</td>
+                        <td style='border-radius:0;' class='tec_mes-diag-tb-tt'>TOTAL de visitas não conformes</td>
+                        <td style='border-radius:0;' class='tec_mes-diag-tb-tt'>QUALIDADE</td>
+                    </tr>
+                    <tr>
+                        <td style='border-radius:0;line-height: 1.5em; ' class='tec_mes-diag-val' id='diag-total-total'>####</td>
+                        <td style='border-radius:0;line-height: 1.5em;' class='tec_mes-diag-val' id='diag-total-prod'>####</td>
+                        <td style='border-radius:0;line-height: 1.5em;' class='tec_mes-diag-val' id='diag-total-rev'>####</td>
+                        <td style='border-radius:0;line-height: 1.5em;' class='tec_mes-diag-val' id='diag-total-quali'>####</td>
+                    </tr>
+                </table>
+                <table class='tec_mes-diag-tb' style='border-collapse: collapse;'>
+                    <tr>
+                        <td colspan="6" class='tec_mes-diag-tb-tt'>CM</td>
+                        <td rowspan="5" style='border:none;width:5px;'></td>
+                        <td colspan="6" class='tec_mes-diag-tb-tt'>TV</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class='tec_mes-diag-tb-subtt'>TOTAL</td>
+                        <td colspan="2" class='tec_mes-diag-tb-subtt'>QUALIDADE</td>
+                        <td colspan="2" class='tec_mes-diag-tb-subtt'>REVISITAS</td>
+
+                        <td colspan="2" class='tec_mes-diag-tb-subtt'>TOTAL</td>
+                        <td colspan="2" class='tec_mes-diag-tb-subtt'>QUALIDADE</td>
+                        <td colspan="2" class='tec_mes-diag-tb-subtt'>REVISITAS</td>
+                    </tr>
+                    <tr>
+                        <td class='cmside' >Nº VTs CM</td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-a-total'>###</td>
+                        <td class='cmside' ><p>Nº VTs CM,</p><p>não conformes</p></td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-a-not_ok'>###</td>
+                        <td class='cmside' ><p>Nº Revisitas CM</p></td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-b-total'>###</td>
+
+                        <td class='tvside' >Nº VTs TV</td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-a-total'>###</td>
+                        <td class='tvside' ><p>Nº VTs TV,</p><p>não conformes</p></td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-a-not_ok'>###</td>
+                        <td class='tvside' ><p>Nº Revisitas TV</p></td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-b-total'>###</td>
+                    </tr>
+                    <tr>
+                        <td class='cmside' rowspan="2">[%] VTs CM sobre TOTAL</td>
+                        <td class='cmside tec_mes-diag-val' rowspan="2" id='diag-cm-a-total-perc1'>###</td>
+                        <td class='cmside'><p>[%] VTs CM (não conforme) sobre TOTAL CM</p></td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-a-not_ok-perc1'>###</td>
+                        <td class='cmside'><p>[%] Rev. CM sobre TOTAL de Rev.</p></td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-b-total-perc1'>###</td>
+
+                        <td class='tvside' rowspan="2">[%] VTs TV sobre TOTAL</td>
+                        <td class='tvside tec_mes-diag-val' rowspan="2" id='diag-tv-a-total-perc1'>###</td>
+                        <td class='tvside'><p>[%] VTs TV (não conforme) sobre TOTAL TV</p></td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-a-not_ok-perc1'>###</td>
+                        <td class='tvside'><p>[%] Rev. TV sobre TOTAL de Rev.</p></td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-b-total-perc1'>###</td>
+                    </tr>
+                    <tr>
+                        <td class='cmside'><p>[%] VTs CM (não conforme) sobre TOTAL</p></td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-a-not_ok-perc2'>###</td>
+                        <td class='cmside'><p>[%] Revisitas CM sobre TOTAL</p></td>
+                        <td class='cmside tec_mes-diag-val' id='diag-cm-b-total-perc2'>###</td>
+
+                        <td class='tvside'><p>[%] VTs TV (não conforme) sobre TOTAL</p></td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-a-not_ok-perc2'>###</td>
+                        <td class='tvside'><p>[%] Revisitas TV sobre TOTAL</p></td>
+                        <td class='tvside tec_mes-diag-val' id='diag-tv-b-total-perc2'>###</td>
+                    </tr>
+                </table>
+            </div>
+            <div style='width:100%;text-align:center;overflow:hidden;'>
+                <div class='cfm'>
+                    <div class='cfm-tt'>CAUSAS</div>
+                    <div class='cfm-body'>
+                        <div class='kljklj' style="left:0;border-right: #D3D6FF solid 1px;">
+                            <div>Ranking 1ª Visita</div>
+                            <div id='tec_mes-diag-causas-a' class='tyiaqw'></div>
+                        </div>
+
+                        <div class='kljklj' style="right:0;border-left: #D3D6FF solid 1px;">
+                            <div>Ranking Re-Visita</div>
+                            <div id='tec_mes-diag-causas-b' class='tyiaqw'></div>
+                        </div>
+                    </div>
+                </div>
+                <div class='cfm'>
+                    <div class='cfm-tt'>FALHAS</div>
+                    <div class='cfm-body'>
+                        <div class='kljklj' style="left:0;border-right: #D3D6FF solid 1px;">
+                            <div>Ranking 1ª Visita</div>
+                            <div id='tec_mes-diag-falhas-a' class='tyiaqw'></div>
+                        </div>
+
+                        <div class='kljklj' style="right:0;border-left: #D3D6FF solid 1px;">
+                            <div id='sdaskwqkqs'>Ranking Re-Visita</div>
+                            <div id='tec_mes-diag-falhas-b' class='tyiaqw'></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class='cfm'>
+                    <div class='cfm-tt'>MOTIVOS</div>
+                    <div class='cfm-body' style='position:relative;width:100%;display:block;'>
+                        <div class='kljklj' style="left:0;border-right: #D3D6FF solid 1px;">
+                            <div id='ijgyewq'>Ranking 1ª Visita</div>
+                            <div id='tec_mes-diag-motivos-a' class='tyiaqw'></div>
+                        </div>
+
+                        <div class='kljklj' style="right:0;border-left: #D3D6FF solid 1px;">
+                            <div id='uuuhaghhqw'>Ranking Re-Visita</div>
+                            <div id='tec_mes-diag-motivos-b' class='tyiaqw'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

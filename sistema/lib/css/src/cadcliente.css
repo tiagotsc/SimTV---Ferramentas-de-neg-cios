@@ -1,0 +1,11 @@
+#headcadcli{
+    height: 40px;
+    width:100%;
+    color:#000000;
+    background: #ff00ff;
+    background-color: rgb(211,211,211);
+    overflow: hidden;
+}
+#content{
+  text-align: center;
+}
